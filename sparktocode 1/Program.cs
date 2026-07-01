@@ -325,7 +325,7 @@
             //}
             //////////////////////////////////////////////////////////////////////
             //Task 12 - Shipping Cost Calculator
-            
+
             //char region;
             //double weight;
             //double baseCost = 0;
@@ -402,8 +402,44 @@
             //        break;
             //}
             ///////////////////////////////////////////////////////////////////////
-            
 
+            //Task 13 - Triangle Type Classifier
+
+
+            //double side1, side2, side3;
+
+            //Console.WriteLine("Enter first side:");
+            //side1 = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Enter second side:");
+            //side2 = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Enter third side:");
+            //side3 = Convert.ToDouble(Console.ReadLine());
+
+            //if ((side1 + side2 > side3) &&
+            //    (side1 + side3 > side2) &&
+            //    (side2 + side3 > side1))
+            //{
+            //    if (side1 == side2 && side2 == side3)
+            //    {
+            //        Console.WriteLine("Equilateral Triangle");
+            //    }
+            //    else if (side1 == side2 || side1 == side3 || side2 == side3)
+            //    {
+            //        Console.WriteLine("Isosceles Triangle");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Scalene Triangle");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid Triangle");
+            //}
+            //////////////////////////////////////////////////////////////////
+            
 
 
 
