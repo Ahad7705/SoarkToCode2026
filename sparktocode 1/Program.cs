@@ -286,7 +286,7 @@
 
             //////////////////////////////////////////////////////////////////
             //Task 11 - Loan Eligibility System
-            
+
 
             //int age;
             //double income;
@@ -324,7 +324,86 @@
             //    }
             //}
             //////////////////////////////////////////////////////////////////////
+            //Task 12 - Shipping Cost Calculator
             
+            //char region;
+            //double weight;
+            //double baseCost = 0;
+            //double extraCharge = 0;
+            //double totalCost;
+
+            //Console.WriteLine("Enter region code (A/B/C):");
+            //region = Convert.ToChar(Console.ReadLine());
+
+            //Console.WriteLine("Enter package weight (kg):");
+            //weight = Convert.ToDouble(Console.ReadLine());
+
+            //switch (region)
+            //{
+            //    case 'A':
+            //        baseCost = 1.000;
+
+            //        if (weight > 10)
+            //        {
+            //            extraCharge = 5.000;
+            //        }
+            //        else if (weight > 5)
+            //        {
+            //            extraCharge = 2.000;
+            //        }
+
+            //        totalCost = baseCost + extraCharge;
+
+            //        Console.WriteLine("Base Cost: " + baseCost);
+            //        Console.WriteLine("Extra Charge: " + extraCharge);
+            //        Console.WriteLine("Total Cost: " + totalCost);
+            //        break;
+
+            //    case 'B':
+            //        baseCost = 3.000;
+
+            //        if (weight > 10)
+            //        {
+            //            extraCharge = 5.000;
+            //        }
+            //        else if (weight > 5)
+            //        {
+            //            extraCharge = 2.000;
+            //        }
+
+            //        totalCost = baseCost + extraCharge;
+
+            //        Console.WriteLine("Base Cost: " + baseCost);
+            //        Console.WriteLine("Extra Charge: " + extraCharge);
+            //        Console.WriteLine("Total Cost: " + totalCost);
+            //        break;
+
+            //    case 'C':
+            //        baseCost = 7.000;
+
+            //        if (weight > 10)
+            //        {
+            //            extraCharge = 5.000;
+            //        }
+            //        else if (weight > 5)
+            //        {
+            //            extraCharge = 2.000;
+            //        }
+
+            //        totalCost = baseCost + extraCharge;
+
+            //        Console.WriteLine("Base Cost: " + baseCost);
+            //        Console.WriteLine("Extra Charge: " + extraCharge);
+            //        Console.WriteLine("Total Cost: " + totalCost);
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Invalid region");
+            //        break;
+            //}
+            ///////////////////////////////////////////////////////////////////////
+            
+
 
 
 
