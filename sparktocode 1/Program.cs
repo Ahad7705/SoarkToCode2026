@@ -156,7 +156,38 @@
             //   Console.WriteLine("Senior Ticket: 3 OMR");
             //}
             //////////////////////////////////////////////////////
-           
+
+            //Task 8 - Restaurant Bill with Membership Discount
+
+            //double bill;
+            //double discount;
+            //double finalAmount;
+            //string memberInput;
+            //bool isMember;
+
+            //Console.WriteLine("Enter total bill:");
+            //bill = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Are you a member? (yes/no):");
+            //memberInput = Console.ReadLine();
+
+            //isMember = (memberInput == "yes");
+
+            //if (bill > 20 && isMember)
+            //{
+            //    discount = bill * 0.15;
+            //}
+            //else
+            //{
+            //    discount = 0;
+            //}
+
+            //finalAmount = bill - discount;
+
+            //Console.WriteLine("Original Bill: " + bill);
+            //Console.WriteLine("Discount: " + discount);
+            //Console.WriteLine("Final Amount: " + finalAmount);
+
 
 
         }
