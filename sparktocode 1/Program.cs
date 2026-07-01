@@ -35,9 +35,26 @@
             //Console.WriteLine("Perimeter: " + perimeter);
 
             //Console.WriteLine("------------------");
-            
+
             ////////////////////////////////////////////////////
-            
+
+            //Task 3 - Even or Odd Checker
+            //int number;
+
+            //Console.WriteLine("Enter a number:");
+            //number = Convert.ToInt32(Console.ReadLine());
+
+            //if (number % 2 == 0)
+            //{
+            //  Console.WriteLine("Even");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Odd");
+            //}
+
+            //Console.WriteLine("------------------");
+
 
         }
     }
