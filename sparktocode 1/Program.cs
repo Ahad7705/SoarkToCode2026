@@ -440,7 +440,7 @@
             //}
             //////////////////////////////////////////////////////////////////
             //Task 14 - Online Store Checkout
-           
+
 
             //int productCode;
             //int quantity;
@@ -501,7 +501,67 @@
             //Console.WriteLine("Tax: " + tax);
             //Console.WriteLine("Final Total: " + finalTotal);
 
+            /////////////////////////////////////////////////////////////
+            //Task 15 - University Admission Decision
+            char programType;
+            double gpa;
+            int examScore;
+            string achievementInput;
 
+            bool hasAchievement;
+
+            Console.WriteLine("Enter program type (S/A):");
+            programType = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("Enter GPA:");
+            gpa = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter exam score:");
+            examScore = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Do you have extracurricular achievement? (yes/no):");
+            achievementInput = Console.ReadLine();
+
+            hasAchievement = (achievementInput == "yes");
+
+            switch (programType)
+            {
+                case 'S':
+
+                    if (gpa >= 3.0 && examScore >= 75)
+                    {
+                        Console.WriteLine("Admitted - Science");
+                    }
+                    else if (hasAchievement)
+                    {
+                        Console.WriteLine("Conditionally Admitted - Science");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not Admitted - Science");
+                    }
+                    break;
+
+                case 'A':
+
+                    if (gpa >= 2.5 && examScore >= 60)
+                    {
+                        Console.WriteLine("Admitted - Arts");
+                    }
+                    else if (hasAchievement)
+                    {
+                        Console.WriteLine("Conditionally Admitted - Arts");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not Admitted - Arts");
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid program type");
+                    break;
+            }
 
         }
     }
