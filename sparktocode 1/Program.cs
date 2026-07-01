@@ -439,7 +439,67 @@
             //    Console.WriteLine("Invalid Triangle");
             //}
             //////////////////////////////////////////////////////////////////
-            
+            //Task 14 - Online Store Checkout
+           
+
+            //int productCode;
+            //int quantity;
+            //double unitPrice = 0;
+            //double subtotal;
+            //double discount = 0;
+            //double tax;
+            //double finalTotal;
+
+            //string couponInput;
+            //bool hasCoupon;
+
+            //Console.WriteLine("Enter product code (1-3):");
+            //productCode = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter quantity:");
+            //quantity = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Do you have a coupon? (yes/no):");
+            //couponInput = Console.ReadLine();
+
+            //hasCoupon = (couponInput == "yes");
+
+            //switch (productCode)
+            //{
+            //    case 1:
+            //        unitPrice = 8.500;
+            //        break;
+
+            //    case 2:
+            //        unitPrice = 12.000;
+            //        break;
+
+            //    case 3:
+            //        unitPrice = 5.000;
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Invalid product code");
+            //        return;
+            //}
+
+            //subtotal = unitPrice * quantity;
+
+            //if (hasCoupon && subtotal > 20)
+            //{
+            //    discount = subtotal * 0.10;
+            //}
+
+            //double afterDiscount = subtotal - discount;
+
+            //tax = afterDiscount * 0.05;
+
+            //finalTotal = afterDiscount + tax;
+
+            //Console.WriteLine("Subtotal: " + subtotal);
+            //Console.WriteLine("Discount: " + discount);
+            //Console.WriteLine("Tax: " + tax);
+            //Console.WriteLine("Final Total: " + finalTotal);
 
 
 
