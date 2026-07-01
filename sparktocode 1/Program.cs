@@ -83,37 +83,61 @@
             /////////////////////////////////////////////
 
             //Task 5 - Grade Letter Lookup
-//            char grade;
-//            Console.WriteLine("Enter grade:");
-//            grade = Convert.ToChar(Console.ReadLine());
+            //            char grade;
+            //            Console.WriteLine("Enter grade:");
+            //            grade = Convert.ToChar(Console.ReadLine());
 
-//            switch (grade)
-//            {
-//               case 'A':
-//                   Console.WriteLine("Excellent");
-//                  break;
-//               case 'B':
-//                 Console.WriteLine("Very Good");
-//                   break;
-//               case 'C':
-//                  Console.WriteLine("Good");
-//                   break;
-//               case 'D':
-//                  Console.WriteLine("Pass");
-//                   break;
-//               case 'F':
-//                   Console.WriteLine("Fail");
-//                break;
-//               default:
-//                   Console.WriteLine("Invalid grade");
-//                  break;
-//            }
+            //            switch (grade)
+            //            {
+            //               case 'A':
+            //                   Console.WriteLine("Excellent");
+            //                  break;
+            //               case 'B':
+            //                 Console.WriteLine("Very Good");
+            //                   break;
+            //               case 'C':
+            //                  Console.WriteLine("Good");
+            //                   break;
+            //               case 'D':
+            //                  Console.WriteLine("Pass");
+            //                   break;
+            //               case 'F':
+            //                   Console.WriteLine("Fail");
+            //                break;
+            //               default:
+            //                   Console.WriteLine("Invalid grade");
+            //                  break;
+            //            }
 
-//            Console.WriteLine("------------------");
-         /////////////////////////////////////////////////////////
-         
+            //            Console.WriteLine("------------------");
+            /////////////////////////////////////////////////////////
+            //Task 6 - Temperature Converter
+            //double celsius, fahrenheit;
+
+            //Console.WriteLine("Enter temperature in Celsius:");
+            //celsius = Convert.ToDouble(Console.ReadLine());
+
+            //fahrenheit = (celsius * 9 / 5) + 32;
+
+            //if (celsius < 10)
+            //{
+            //   Console.WriteLine("Cold");
+            //}
+            //else if (celsius <= 30)
+            //{
+            //    Console.WriteLine("Mild");
+            //}
+            //else
+            //{
+            //   Console.WriteLine("Hot");
+            //}
+
+            //Console.WriteLine("Fahrenheit: " + fahrenheit);
+
+            //Console.WriteLine("------------------");
+            ///////////////////////////////////////////////
 
 
-       }
-  }
+        }
+    }
 }
