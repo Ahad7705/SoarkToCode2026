@@ -18,6 +18,27 @@
             //Console.WriteLine("------------------");
 
             /////////////////////////////////////////////////////
+
+            //Task 2 - Rectangle Calculator
+            //double length, width, area, perimeter;
+
+            //Console.WriteLine("Enter length:");
+            //length = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Enter width:");
+            //width = Convert.ToDouble(Console.ReadLine());
+
+            //area = length * width;
+            //perimeter = 2 * (length + width);
+
+            //Console.WriteLine("Area: " + area);
+            //Console.WriteLine("Perimeter: " + perimeter);
+
+            //Console.WriteLine("------------------");
+            
+            ////////////////////////////////////////////////////
+            
+
         }
     }
 }
