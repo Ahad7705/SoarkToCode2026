@@ -90,7 +90,30 @@
 
             //Console.WriteLine("Correct");
             //Console.WriteLine("Attempts: " + attempts);
+            /////////////////////////////////////////////
+            // Task 6 - Safe Division Calculator
 
+            //try
+            //{
+            //    Console.WriteLine("Enter first number:");
+            //    double num1 = Convert.ToDouble(Console.ReadLine());
+
+            //    Console.WriteLine("Enter second number:");
+            //    double num2 = Convert.ToDouble(Console.ReadLine());
+
+            //    double result = num1 / num2;
+
+            //    Console.WriteLine("Result: " + result);
+            //}
+            //catch (DivideByZeroException)
+            //{
+            //    Console.WriteLine("Cannot divide by zero");
+            //}
+            //catch (FormatException)
+            //{
+            //    Console.WriteLine("Invalid input");
+            //}
+            /////////////////////////////////////////////////////////
 
 
         }
