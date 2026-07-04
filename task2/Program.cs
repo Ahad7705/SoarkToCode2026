@@ -101,6 +101,11 @@
             //    Console.WriteLine("Enter second number:");
             //    double num2 = Convert.ToDouble(Console.ReadLine());
 
+            //    if (num2 == 0)
+            //    {
+            //        throw new DivideByZeroException();
+            //    }
+
             //    double result = num1 / num2;
 
             //    Console.WriteLine("Result: " + result);
@@ -111,7 +116,11 @@
             //}
             //catch (FormatException)
             //{
-            //    Console.WriteLine("Invalid input");
+            //    Console.WriteLine("Invalid input. Please enter a valid number.");
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("An unexpected error occurred.");
             //}
             /////////////////////////////////////////////////////////
 
@@ -239,7 +248,7 @@
             //            attempts++;
             //        }
             //    }
-            //    catch
+            //    catch (FormatException)
             //    {
             //        Console.WriteLine("Invalid PIN");
             //        attempts++;
@@ -256,11 +265,13 @@
 
             //while (choice != 4)
             //{
-            //    Console.WriteLine("\nATM Menu");
+            //    Console.WriteLine();
+            //    Console.WriteLine("ATM Menu");
             //    Console.WriteLine("1. Deposit");
             //    Console.WriteLine("2. Withdraw");
             //    Console.WriteLine("3. Check Balance");
             //    Console.WriteLine("4. Exit");
+            //    Console.WriteLine("Enter your choice:");
 
             //    try
             //    {
@@ -269,41 +280,59 @@
             //        switch (choice)
             //        {
             //            case 1:
-            //                Console.WriteLine("Enter deposit amount:");
-            //                double deposit = Convert.ToDouble(Console.ReadLine());
 
-            //                if (deposit > 0)
+            //                try
             //                {
-            //                    balance += deposit;
-            //                    Console.WriteLine("New Balance: " + balance);
+            //                    Console.WriteLine("Enter deposit amount:");
+            //                    double deposit = Convert.ToDouble(Console.ReadLine());
+
+            //                    if (deposit <= 0)
+            //                    {
+            //                        Console.WriteLine("Invalid amount");
+            //                    }
+            //                    else
+            //                    {
+            //                        balance += deposit;
+            //                        Console.WriteLine("New Balance: " + balance);
+            //                    }
             //                }
-            //                else
+            //                catch (FormatException)
             //                {
             //                    Console.WriteLine("Invalid amount");
             //                }
+
             //                break;
 
             //            case 2:
-            //                Console.WriteLine("Enter withdrawal amount:");
-            //                double withdraw = Convert.ToDouble(Console.ReadLine());
 
-            //                if (withdraw <= 0)
+            //                try
+            //                {
+            //                    Console.WriteLine("Enter withdrawal amount:");
+            //                    double withdraw = Convert.ToDouble(Console.ReadLine());
+
+            //                    if (withdraw <= 0)
+            //                    {
+            //                        Console.WriteLine("Invalid amount");
+            //                    }
+            //                    else if (withdraw > balance)
+            //                    {
+            //                        Console.WriteLine("Insufficient balance");
+            //                    }
+            //                    else
+            //                    {
+            //                        balance -= withdraw;
+            //                        Console.WriteLine("New Balance: " + balance);
+            //                    }
+            //                }
+            //                catch (FormatException)
             //                {
             //                    Console.WriteLine("Invalid amount");
             //                }
-            //                else if (withdraw > balance)
-            //                {
-            //                    Console.WriteLine("Insufficient balance");
-            //                }
-            //                else
-            //                {
-            //                    balance -= withdraw;
-            //                    Console.WriteLine("New Balance: " + balance);
-            //                }
+
             //                break;
 
             //            case 3:
-            //                Console.WriteLine("Balance: " + balance);
+            //                Console.WriteLine("Current Balance: " + balance);
             //                break;
 
             //            case 4:
@@ -315,9 +344,9 @@
             //                break;
             //        }
             //    }
-            //    catch
+            //    catch (FormatException)
             //    {
-            //        Console.WriteLine("Invalid input");
+            //        Console.WriteLine("Please enter a valid menu option.");
             //    }
             //}
             ///////////////////////////////////////////////////////////////////
