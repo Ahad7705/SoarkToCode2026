@@ -211,7 +211,117 @@
             //}
 
             //Console.WriteLine("Sum = " + sum);
-            ////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////
+            // Task 10 - Simple ATM Simulation
+
+            //int pin = 1234;
+            //int enteredPin;
+            //int attempts = 0;
+            //double balance = 100.000;
+            //bool pinCorrect = false;
+
+            //// PIN Verification
+            //while (attempts < 3)
+            //{
+            //    try
+            //    {
+            //        Console.WriteLine("Enter PIN:");
+            //        enteredPin = Convert.ToInt32(Console.ReadLine());
+
+            //        if (enteredPin == pin)
+            //        {
+            //            pinCorrect = true;
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Incorrect PIN");
+            //            attempts++;
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        Console.WriteLine("Invalid PIN");
+            //        attempts++;
+            //    }
+            //}
+
+            //if (!pinCorrect)
+            //{
+            //    Console.WriteLine("Card Blocked");
+            //    return;
+            //}
+
+            //int choice = 0;
+
+            //while (choice != 4)
+            //{
+            //    Console.WriteLine("\nATM Menu");
+            //    Console.WriteLine("1. Deposit");
+            //    Console.WriteLine("2. Withdraw");
+            //    Console.WriteLine("3. Check Balance");
+            //    Console.WriteLine("4. Exit");
+
+            //    try
+            //    {
+            //        choice = Convert.ToInt32(Console.ReadLine());
+
+            //        switch (choice)
+            //        {
+            //            case 1:
+            //                Console.WriteLine("Enter deposit amount:");
+            //                double deposit = Convert.ToDouble(Console.ReadLine());
+
+            //                if (deposit > 0)
+            //                {
+            //                    balance += deposit;
+            //                    Console.WriteLine("New Balance: " + balance);
+            //                }
+            //                else
+            //                {
+            //                    Console.WriteLine("Invalid amount");
+            //                }
+            //                break;
+
+            //            case 2:
+            //                Console.WriteLine("Enter withdrawal amount:");
+            //                double withdraw = Convert.ToDouble(Console.ReadLine());
+
+            //                if (withdraw <= 0)
+            //                {
+            //                    Console.WriteLine("Invalid amount");
+            //                }
+            //                else if (withdraw > balance)
+            //                {
+            //                    Console.WriteLine("Insufficient balance");
+            //                }
+            //                else
+            //                {
+            //                    balance -= withdraw;
+            //                    Console.WriteLine("New Balance: " + balance);
+            //                }
+            //                break;
+
+            //            case 3:
+            //                Console.WriteLine("Balance: " + balance);
+            //                break;
+
+            //            case 4:
+            //                Console.WriteLine("Thank you for using the ATM");
+            //                break;
+
+            //            default:
+            //                Console.WriteLine("Invalid option");
+            //                break;
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        Console.WriteLine("Invalid input");
+            //    }
+            //}
+            ///////////////////////////////////////////////////////////////////
+
 
         }
     }
