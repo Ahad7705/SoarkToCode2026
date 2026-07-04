@@ -159,21 +159,59 @@
             //////////////////////////////////////////////////////////////////////
             // Task 8 - Sum of Even Numbers Only
 
-            int number;
-            int sum = 0;
+            //int number;
+            //int sum = 0;
 
-            Console.WriteLine("Enter a positive number:");
-            number = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter a positive number:");
+            //number = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= number; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    sum += i;
-                }
-            }
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        sum += i;
+            //    }
+            //}
 
-            Console.WriteLine("Sum of even numbers = " + sum);
+            //Console.WriteLine("Sum of even numbers = " + sum);
+            ////////////////////////////////////////////////////////////
+            // Task 9 - Validated Positive Number Input
+
+            //int number = 0;
+            //bool validInput = false;
+
+            //do
+            //{
+            //    try
+            //    {
+            //        Console.WriteLine("Enter a positive whole number:");
+            //        number = Convert.ToInt32(Console.ReadLine());
+
+            //        if (number > 0)
+            //        {
+            //            validInput = true;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Please enter a positive number.");
+            //        }
+            //    }
+            //    catch (FormatException)
+            //    {
+            //        Console.WriteLine("Invalid input. Please enter a whole number.");
+            //    }
+
+            //} while (!validInput);
+
+            //int sum = 0;
+
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    sum += i;
+            //}
+
+            //Console.WriteLine("Sum = " + sum);
+            ////////////////////////////////////////////////
 
         }
     }
