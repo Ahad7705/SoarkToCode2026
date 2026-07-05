@@ -167,7 +167,30 @@
             //Console.WriteLine("Rounded Up: " + Math.Ceiling(number));
             //Console.WriteLine("Rounded Down: " + Math.Floor(number));
             ///////////////////////////////////////////////////////////////////////////////////////
-            
+            // Task 10 - Word Position Finder
+
+            //string sentence;
+            //string word;
+
+            //Console.WriteLine("Enter a sentence:");
+            //sentence = Console.ReadLine();
+
+            //Console.WriteLine("Enter a word to search:");
+            //word = Console.ReadLine();
+
+            //int firstPosition = sentence.IndexOf(word);
+            //int lastPosition = sentence.LastIndexOf(word);
+
+            //if (firstPosition == -1)
+            //{
+            //    Console.WriteLine("Word not found");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("First Position: " + firstPosition);
+            //    Console.WriteLine("Last Position: " + lastPosition);
+            //}
+            /////////////////////////////////////////////////////////////////////////////////////////////
 
 
         }
