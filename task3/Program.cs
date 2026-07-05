@@ -21,6 +21,21 @@
             //Console.WriteLine("Positive Difference: " + difference);
             //////////////////////////////////////////////////////////////////
 
+            // Task 2 - Power & Root Explorer
+
+            double number;
+            double square;
+            double squareRoot;
+
+            Console.WriteLine("Enter a number:");
+            number = Convert.ToDouble(Console.ReadLine());
+
+            square = Math.Pow(number, 2);
+            squareRoot = Math.Sqrt(number);
+
+            Console.WriteLine("Square: " + square);
+            Console.WriteLine("Square Root: " + squareRoot);
+
 
         }
     }
