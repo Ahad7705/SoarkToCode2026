@@ -60,6 +60,27 @@
 
             //Console.WriteLine("End Date: " + endDate.ToString("yyyy-MM-dd"));
             ///////////////////////////////////////////////////////////////////////
+            // Task 5 - Grade Rounding System
+
+            //double score;
+            //double roundedScore;
+
+            //Console.WriteLine("Enter your exam score:");
+            //score = Convert.ToDouble(Console.ReadLine());
+
+            //roundedScore = Math.Round(score);
+
+            //Console.WriteLine("Rounded Score: " + roundedScore);
+
+            //if (roundedScore >= 60)
+            //{
+            //    Console.WriteLine("Result: Pass");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Result: Fail");
+            //}
+            //////////////////////////////////////////////////////////////////////////////
 
 
         }
