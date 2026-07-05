@@ -48,7 +48,18 @@
             //Console.WriteLine("Lowercase: " + fullName.ToLower());
             //Console.WriteLine("Length: " + fullName.Length);
             /////////////////////////////////////////////////////////////////////
-            
+            // Task 4 - Subscription End Date
+
+            //int days;
+            //DateTime endDate;
+
+            //Console.WriteLine("Enter free trial days:");
+            //days = Convert.ToInt32(Console.ReadLine());
+
+            //endDate = DateTime.Today.AddDays(days);
+
+            //Console.WriteLine("End Date: " + endDate.ToString("yyyy-MM-dd"));
+            ///////////////////////////////////////////////////////////////////////
 
 
         }
