@@ -107,7 +107,29 @@
             //    }
             //}
             ///////////////////////////////////////////////////////////////////////////
-            
+            // Task 7 - Clean Name Comparator
+
+            //string name1;
+            //string name2;
+
+            //Console.WriteLine("Enter first name:");
+            //name1 = Console.ReadLine();
+
+            //Console.WriteLine("Enter second name:");
+            //name2 = Console.ReadLine();
+
+            //name1 = name1.Trim().ToUpper();
+            //name2 = name2.Trim().ToUpper();
+
+            //if (name1 == name2)
+            //{
+            //    Console.WriteLine("Match");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No Match");
+            //}
+            /////////////////////////////////////////////////////////////////////////////////////
 
 
         }
