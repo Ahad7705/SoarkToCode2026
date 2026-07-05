@@ -23,18 +23,32 @@
 
             // Task 2 - Power & Root Explorer
 
-            double number;
-            double square;
-            double squareRoot;
+            //double number;
+            //double square;
+            //double squareRoot;
 
-            Console.WriteLine("Enter a number:");
-            number = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter a number:");
+            //number = Convert.ToDouble(Console.ReadLine());
 
-            square = Math.Pow(number, 2);
-            squareRoot = Math.Sqrt(number);
+            //square = Math.Pow(number, 2);
+            //squareRoot = Math.Sqrt(number);
 
-            Console.WriteLine("Square: " + square);
-            Console.WriteLine("Square Root: " + squareRoot);
+            //Console.WriteLine("Square: " + square);
+            //Console.WriteLine("Square Root: " + squareRoot);
+            //////////////////////////////////////////////////////////////////////
+
+            // Task 3 - Name Formatter
+
+            //string fullName;
+
+            //Console.WriteLine("Enter your full name:");
+            //fullName = Console.ReadLine();
+
+            //Console.WriteLine("Uppercase: " + fullName.ToUpper());
+            //Console.WriteLine("Lowercase: " + fullName.ToLower());
+            //Console.WriteLine("Length: " + fullName.Length);
+            /////////////////////////////////////////////////////////////////////
+            
 
 
         }
