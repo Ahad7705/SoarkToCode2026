@@ -156,6 +156,18 @@
 
             //Console.WriteLine("Expiry Date: " + expiryDate.ToString("yyyy-MM-dd"));
             /////////////////////////////////////////////////////////////////////////////////////////
+            // Task 9 - Round Up / Round Down Explorer
+
+            //double number;
+
+            //Console.WriteLine("Enter a decimal number:");
+            //number = Convert.ToDouble(Console.ReadLine());
+
+            //Console.WriteLine("Nearest Whole Number: " + Math.Round(number));
+            //Console.WriteLine("Rounded Up: " + Math.Ceiling(number));
+            //Console.WriteLine("Rounded Down: " + Math.Floor(number));
+            ///////////////////////////////////////////////////////////////////////////////////////
+            
 
 
         }
