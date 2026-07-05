@@ -232,6 +232,25 @@
             //    Console.WriteLine("Verification Failed");
             //}
             /////////////////////////////////////////////////////////////////////////////////////
+            // Task 12 - Birthday Insights
+
+            //DateTime birthDate;
+
+            //Console.WriteLine("Enter your birth date (yyyy-MM-dd):");
+            //birthDate = DateTime.Parse(Console.ReadLine());
+
+            //int age = DateTime.Today.Year - birthDate.Year;
+
+            //if (DateTime.Today.Month < birthDate.Month ||
+            //   (DateTime.Today.Month == birthDate.Month &&
+            //    DateTime.Today.Day < birthDate.Day))
+            //{
+            //    age--;
+            //}
+
+            //Console.WriteLine("Age: " + age);
+            //Console.WriteLine("Day of Birth: " + birthDate.DayOfWeek);
+
 
 
         }
