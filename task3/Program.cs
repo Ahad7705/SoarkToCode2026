@@ -191,6 +191,47 @@
             //    Console.WriteLine("Last Position: " + lastPosition);
             //}
             /////////////////////////////////////////////////////////////////////////////////////////////
+            // Task 11 - One-Time Password (OTP) Generator
+
+            //Random random = new Random();
+            //int otp = random.Next(1000, 10000);
+
+            //Console.WriteLine("OTP: " + otp);
+
+            //int attempts = 0;
+            //bool verified = false;
+
+            //while (attempts < 3)
+            //{
+            //    try
+            //    {
+            //        Console.WriteLine("Enter OTP:");
+            //        int userOtp = Convert.ToInt32(Console.ReadLine());
+
+            //        if (userOtp == otp)
+            //        {
+            //            verified = true;
+            //            Console.WriteLine("Verified");
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Incorrect OTP");
+            //            attempts++;
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        Console.WriteLine("Invalid Input");
+            //        attempts++;
+            //    }
+            //}
+
+            //if (!verified)
+            //{
+            //    Console.WriteLine("Verification Failed");
+            //}
+            /////////////////////////////////////////////////////////////////////////////////////
 
 
         }
