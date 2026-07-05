@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sparktocode 1", "sparktocod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task2", "task2\task2.csproj", "{00F76D01-3FC0-4C15-9B17-2898ED3DA8ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task3", "task3\task3.csproj", "{53867B80-AC63-46DD-9EA7-6DA663417CCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{00F76D01-3FC0-4C15-9B17-2898ED3DA8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F76D01-3FC0-4C15-9B17-2898ED3DA8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F76D01-3FC0-4C15-9B17-2898ED3DA8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53867B80-AC63-46DD-9EA7-6DA663417CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53867B80-AC63-46DD-9EA7-6DA663417CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53867B80-AC63-46DD-9EA7-6DA663417CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53867B80-AC63-46DD-9EA7-6DA663417CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
