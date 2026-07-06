@@ -83,6 +83,23 @@ namespace task4
         //    }
         //}
         //////////////////////////////////////////////////////////////////
+        // Task 9 - Overloaded Multiply Function
+
+        //static int Multiply(int a, int b)
+        //{
+        //    return a * b;
+        //}
+
+        //static double Multiply(double a, double b)
+        //{
+        //    return a * b;
+        //}
+
+        //static int Multiply(int a, int b, int c)
+        //{
+        //    return a * b * c;
+        //}
+        /////////////////////////////////////////////////////////////
 
         static void Main(string[] args)
         {
@@ -172,6 +189,15 @@ namespace task4
 
             //Countdown(startNumber);
             //////////////////////////////////////////////////////////////////
+            // Task 9
+
+            //Console.WriteLine("Multiply(int, int) = " + Multiply(2, 3));
+
+            //Console.WriteLine("Multiply(double, double) = " + Multiply(2.5, 3.5));
+
+            //Console.WriteLine("Multiply(int, int, int) = " + Multiply(2, 3, 4));
+            ///////////////////////////////////////////////////////////////////////////
+
         }
     }
 }
