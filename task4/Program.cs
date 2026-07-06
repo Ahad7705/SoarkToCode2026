@@ -38,16 +38,43 @@ namespace task4
 
         ////////////////////////////////////////////////
         // Task 6 - Rectangle Area Function
-        static double CalculateArea(double length, double width)
-        {
-            return length * width;
-        }
+        //static double CalculateArea(double length, double width)
+        //{
+        //    return length * width;
+        //}
 
-        // Task 6 - Rectangle Perimeter Function
-        static double CalculatePerimeter(double length, double width)
-        {
-            return 2 * (length + width);
-        }
+        //// Task 6 - Rectangle Perimeter Function
+        //static double CalculatePerimeter(double length, double width)
+        //{
+        //    return 2 * (length + width);
+        //}
+        ////////////////////////////////////////////////
+        // Task 7 - Grade Letter Function
+        //static string GetGradeLetter(int score)
+        //{
+        //    if (score >= 90)
+        //    {
+        //        return "A";
+        //    }
+        //    else if (score >= 80)
+        //    {
+        //        return "B";
+        //    }
+        //    else if (score >= 70)
+        //    {
+        //        return "C";
+        //    }
+        //    else if (score >= 60)
+        //    {
+        //        return "D";
+        //    }
+        //    else
+        //    {
+        //        return "F";
+        //    }
+        //}
+        ///////////////////////////////////////////////////////////////
+
         static void Main(string[] args)
         {
             // Task 1
@@ -103,19 +130,30 @@ namespace task4
             //{
             //    Console.WriteLine("Odd");
             //}
+            ////////////////////////////////////////////////
             // Task 6
 
-            double length;
-            double width;
+            //double length;
+            //double width;
 
-            Console.WriteLine("Enter length:");
-            length = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter length:");
+            //length = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Enter width:");
-            width = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter width:");
+            //width = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Area = " + CalculateArea(length, width));
-            Console.WriteLine("Perimeter = " + CalculatePerimeter(length, width));
+            //Console.WriteLine("Area = " + CalculateArea(length, width));
+            //Console.WriteLine("Perimeter = " + CalculatePerimeter(length, width));
+            ////////////////////////////////////////////////
+            // Task 7
+
+            //int score;
+
+            //Console.WriteLine("Enter your score:");
+            //score = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Grade = " + GetGradeLetter(score));
+            //////////////////////////////////////////////////////////////////
         }
     }
 }
