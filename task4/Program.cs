@@ -187,12 +187,12 @@ namespace task4
         }
 
         // Task 12 - Print Report Card Function
-        static void PrintReportCard(string name, double average, string grade)
-        {
-            Console.WriteLine("Student Name: " + name);
-            Console.WriteLine("Average: " + average);
-            Console.WriteLine("Grade: " + grade);
-        }
+        //static void PrintReportCard(string name, double average, string grade)
+        //{
+        //    Console.WriteLine("Student Name: " + name);
+        //    Console.WriteLine("Average: " + average);
+        //    Console.WriteLine("Grade: " + grade);
+        //}
 
         static void Main(string[] args)
         {
@@ -379,30 +379,32 @@ namespace task4
             ////////////////////////////////////////////////////////////////////////////////////
             // Task 12
 
-            string studentName;
-            double score1;
-            double score2;
-            double score3;
-            double average;
-            string grade;
+            //string studentName;
+            //double score1;
+            //double score2;
+            //double score3;
+            //double average;
+            //string grade;
 
-            Console.WriteLine("Enter student name:");
-            studentName = Console.ReadLine();
+            //Console.WriteLine("Enter student name:");
+            //studentName = Console.ReadLine();
 
-            Console.WriteLine("Enter first score:");
-            score1 = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter first score:");
+            //score1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Enter second score:");
-            score2 = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter second score:");
+            //score2 = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Enter third score:");
-            score3 = Convert.ToDouble(Console.ReadLine());
+            //Console.WriteLine("Enter third score:");
+            //score3 = Convert.ToDouble(Console.ReadLine());
 
-            average = CalculateAverage(score1, score2, score3);
+            //average = CalculateAverage(score1, score2, score3);
 
-            grade = GetGradeLetter(average);
+            //grade = GetGradeLetter(average);
 
-            PrintReportCard(studentName, average, grade);
+            //PrintReportCard(studentName, average, grade);
+
+            /////////////////////////////////////////////////////////////////////////////////////
         }
         }
     }
