@@ -111,6 +111,49 @@ namespace task4
         //{
         //    return length * width;
         //}
+        ////////////////////////////////////////////////////////////////
+        // Task 11 - Add Function
+        static double Add(double a, double b)
+        {
+            return a + b;
+        }
+
+        // Task 11 - Subtract Function
+        static double Subtract(double a, double b)
+        {
+            return a - b;
+        }
+
+        // Task 11 - Multiply Function
+        static double MultiplyNumbers(double a, double b)
+        {
+            return a * b;
+        }
+
+        // Task 11 - Divide Function
+        //static double DivideNumbers(double a, double b)
+        //{
+        //    try
+        //    {
+        //        if (b == 0)
+        //        {
+        //            throw new DivideByZeroException();
+        //        }
+
+        //        return a / b;
+        //    }
+        //    catch (DivideByZeroException)
+        //    {
+        //        Console.WriteLine("Cannot divide by zero");
+        //        return 0;
+        //    }
+        //}
+
+        //// Task 11 - Display Result Function
+        //static void DisplayResult(string operation, double result)
+        //{
+        //    Console.WriteLine(operation + " Result = " + result);
+        //}
 
         static void Main(string[] args)
         {
@@ -245,7 +288,57 @@ namespace task4
             //    Console.WriteLine("Invalid Choice");
             //}
             /////////////////////////////////////////////////////////////////////////////
+            // Task 11
 
+            //int choice2 = 0;
+
+            //while (choice2 != 5)
+            //{
+            //    Console.WriteLine("1. Add");
+            //    Console.WriteLine("2. Subtract");
+            //    Console.WriteLine("3. Multiply");
+            //    Console.WriteLine("4. Divide");
+            //    Console.WriteLine("5. Exit");
+
+            //    choice2 = Convert.ToInt32(Console.ReadLine());
+
+            //    if (choice2 >= 1 && choice2 <= 4)
+            //    {
+            //        double num1;
+            //        double num2;
+            //        double result2 = 0;
+
+            //        Console.WriteLine("Enter first number:");
+            //        num1 = Convert.ToDouble(Console.ReadLine());
+
+            //        Console.WriteLine("Enter second number:");
+            //        num2 = Convert.ToDouble(Console.ReadLine());
+
+            //        switch (choice2)
+            //        {
+            //            case 1:
+            //                result2 = Add(num1, num2);
+            //                DisplayResult("Addition", result2);
+            //                break;
+
+            //            case 2:
+            //                result2 = Subtract(num1, num2);
+            //                DisplayResult("Subtraction", result2);
+            //                break;
+
+            //            case 3:
+            //                result2 = MultiplyNumbers(num1, num2);
+            //                DisplayResult("Multiplication", result2);
+            //                break;
+
+            //            case 4:
+            //                result2 = DivideNumbers(num1, num2);
+            //                DisplayResult("Division", result2);
+            //                break;
+            //        }
+            //    }
+                ////////////////////////////////////////////////////////////////////////////////////
+            }
         }
     }
 }
