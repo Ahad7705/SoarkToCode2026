@@ -100,6 +100,17 @@ namespace task4
         //    return a * b * c;
         //}
         /////////////////////////////////////////////////////////////
+        // Task 10 - Overloaded Area Calculator
+
+        //static double CalculateArea(double side)
+        //{
+        //    return side * side;
+        //}
+
+        //static double CalculateArea(double length, double width)
+        //{
+        //    return length * width;
+        //}
 
         static void Main(string[] args)
         {
@@ -197,6 +208,43 @@ namespace task4
 
             //Console.WriteLine("Multiply(int, int, int) = " + Multiply(2, 3, 4));
             ///////////////////////////////////////////////////////////////////////////
+            // Task 10
+
+            //int choice;
+
+            //Console.WriteLine("Choose Shape:");
+            //Console.WriteLine("1. Square");
+            //Console.WriteLine("2. Rectangle");
+
+            //choice = Convert.ToInt32(Console.ReadLine());
+
+            //if (choice == 1)
+            //{
+            //    double side;
+
+            //    Console.WriteLine("Enter side:");
+            //    side = Convert.ToDouble(Console.ReadLine());
+
+            //    Console.WriteLine("Area = " + CalculateArea(side));
+            //}
+            //else if (choice == 2)
+            //{
+            //    double length;
+            //    double width;
+
+            //    Console.WriteLine("Enter length:");
+            //    length = Convert.ToDouble(Console.ReadLine());
+
+            //    Console.WriteLine("Enter width:");
+            //    width = Convert.ToDouble(Console.ReadLine());
+
+            //    Console.WriteLine("Area = " + CalculateArea(length, width));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid Choice");
+            //}
+            /////////////////////////////////////////////////////////////////////////////
 
         }
     }
