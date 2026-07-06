@@ -74,6 +74,15 @@ namespace task4
         //    }
         //}
         ///////////////////////////////////////////////////////////////
+        // Task 8 - Countdown Function
+        //static void Countdown(int number)
+        //{
+        //    for (int i = number; i >= 1; i--)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //}
+        //////////////////////////////////////////////////////////////////
 
         static void Main(string[] args)
         {
@@ -153,6 +162,15 @@ namespace task4
             //score = Convert.ToInt32(Console.ReadLine());
 
             //Console.WriteLine("Grade = " + GetGradeLetter(score));
+            //////////////////////////////////////////////////////////////////
+            // Task 8
+
+            //int startNumber;
+
+            //Console.WriteLine("Enter a starting number:");
+            //startNumber = Convert.ToInt32(Console.ReadLine());
+
+            //Countdown(startNumber);
             //////////////////////////////////////////////////////////////////
         }
     }
