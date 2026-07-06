@@ -2,26 +2,26 @@
 {
     internal class Program
     {
-        
-        
-            // Task 1 - Personalized Welcome Function
-            //static void PrintWelcome(string name)
-            //{
-            //    Console.WriteLine("Welcome " + name);
-            //}
+        // Task 1 - Personalized Welcome Function
+        //static void PrintWelcome(string name)
+        //{
+        //    Console.WriteLine("Welcome " + name);
+        //}
 
-            //static void Main(string[] args)
-            //{
-            //    string name;
+        //static void Main(string[] args)
+        //{
+        //    string name;
 
-            //    Console.WriteLine("Enter your name:");
-            //    name = Console.ReadLine();
+        //    Console.WriteLine("Enter your name:");
+        //    name = Console.ReadLine();
 
-            //    PrintWelcome(name);
+        //    PrintWelcome(name);
 
-            //    Console.ReadKey();
-            //////////////////////////////////////////////////////////////////////
-            }
-        }
+        //    Console.ReadKey();
+        //////////////////////////////////////////////////////////////////////
+
+
+    }
+}
     
 
