@@ -29,6 +29,14 @@ namespace task4
         //    Console.WriteLine("2. Help");
         //    Console.WriteLine("3. Exit");
         //}
+        ////////////////////////////////////////////////
+        // Task 5 - Even or Odd Function
+        //static bool IsEven(int number)
+        //{
+        //    return number % 2 == 0;
+        //}
+
+        ////////////////////////////////////////////////
         static void Main(string[] args)
         {
             // Task 1
@@ -67,7 +75,23 @@ namespace task4
             ////////////////////////////////////////////////
             // Task 4
 
-           // DisplayMenu();
+            // DisplayMenu();
+            ////////////////////////////////////////////////
+            // Task 5
+
+            //int number2;
+
+            //Console.WriteLine("Enter a number:");
+            //number2 = Convert.ToInt32(Console.ReadLine());
+
+            //if (IsEven(number2))
+            //{
+            //    Console.WriteLine("Even");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Odd");
+            //}
         }
     }
 }
