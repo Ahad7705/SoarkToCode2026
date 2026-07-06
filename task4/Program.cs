@@ -9,35 +9,55 @@ namespace task4
         //{
         //    Console.WriteLine("Welcome " + name);
         //}
-
+        ////////////////////////////////////////////////
         // Task 2 - Square Number Function
         //static int Square(int number)
         //{
         //    return number * number;
         //}
-
-        //static void Main(string[] args)
+        ////////////////////////////////////////////////
+        // Task 3 - Main Celsius to Fahrenheit Function
+        //static double CelsiusToFahrenheit(double celsius)
         //{
-            // Task 1
-            //string name;
+        //    return (celsius * 9 / 5) + 32;
+        //}
+        ////////////////////////////////////////////////
+        static void Main(string[] args)
+        {
+        // Task 1
+        //string name;
 
-            //Console.WriteLine("Enter your name:");
-            //name = Console.ReadLine();
+        //Console.WriteLine("Enter your name:");
+        //name = Console.ReadLine();
 
-            //PrintWelcome(name);
+        //PrintWelcome(name);
+        ////////////////////////////////////////////////
+        // Task 2
+        //int number;
+        //int result;
 
-            // Task 2
-            //int number;
-            //int result;
+        //Console.WriteLine("Enter a number:");
+        //number = Convert.ToInt32(Console.ReadLine());
 
-            //Console.WriteLine("Enter a number:");
-            //number = Convert.ToInt32(Console.ReadLine());
+        //result = Square(number);
 
-            //result = Square(number);
+        //Console.WriteLine("Square = " + result);
 
-            //Console.WriteLine("Square = " + result);
+        //Console.ReadLine();
+        /// <summary>
+        ////////////////////////////////////////////////
+        /// </summary>
+        // Task 3
+//        double celsius;
+//        double fahrenheit;
 
-            //Console.ReadLine();
+//        Console.WriteLine("Enter temperature in Celsius:");
+//celsius = Convert.ToDouble(Console.ReadLine());
+
+//fahrenheit = CelsiusToFahrenheit(celsius);
+
+//        Console.WriteLine("Fahrenheit = " + fahrenheit);
+      ////////////////////////////////////////////////
         }
     }
-//}
+}
