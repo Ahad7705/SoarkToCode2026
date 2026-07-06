@@ -37,6 +37,17 @@ namespace task4
         //}
 
         ////////////////////////////////////////////////
+        // Task 6 - Rectangle Area Function
+        static double CalculateArea(double length, double width)
+        {
+            return length * width;
+        }
+
+        // Task 6 - Rectangle Perimeter Function
+        static double CalculatePerimeter(double length, double width)
+        {
+            return 2 * (length + width);
+        }
         static void Main(string[] args)
         {
             // Task 1
@@ -92,6 +103,19 @@ namespace task4
             //{
             //    Console.WriteLine("Odd");
             //}
+            // Task 6
+
+            double length;
+            double width;
+
+            Console.WriteLine("Enter length:");
+            length = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter width:");
+            width = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Area = " + CalculateArea(length, width));
+            Console.WriteLine("Perimeter = " + CalculatePerimeter(length, width));
         }
     }
 }
