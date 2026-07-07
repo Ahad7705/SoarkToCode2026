@@ -23,20 +23,37 @@
             //////////////////////////////////////////////////////////////////////
             // Task 2 - Dynamic To-Do List
 
-            List<string> tasks = new List<string>();
+            //List<string> tasks = new List<string>();
 
-            for (int i = 0; i < 5; i++)
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.WriteLine("Enter task:");
+            //    tasks.Add(Console.ReadLine());
+            //}
+
+            //Console.WriteLine("To-Do List:");
+
+            //foreach (string task in tasks)
+            //{
+            //    Console.WriteLine("- " + task);
+            //}
+            ////////////////////////////////////////////////////////////////////////////
+            // Task 3 - Browsing History Stack
+
+            Stack<string> browserHistory = new Stack<string>();
+
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("Enter task:");
-                tasks.Add(Console.ReadLine());
+                Console.WriteLine("Enter website URL:");
+                browserHistory.Push(Console.ReadLine());
             }
 
-            Console.WriteLine("To-Do List:");
+            string removedPage = browserHistory.Pop();
 
-            foreach (string task in tasks)
-            {
-                Console.WriteLine("- " + task);
-            }
+            Console.WriteLine("Back button pressed.");
+            Console.WriteLine("Left page: " + removedPage);
+
+            Console.WriteLine("Current page: " + browserHistory.Peek());
         }
     }
 }
