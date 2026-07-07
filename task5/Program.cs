@@ -6,20 +6,22 @@
         {
             // Task 1 - Fixed Grades Array
 
-            int[] grades = new int[5];
+            //int[] grades = new int[5];
 
-            for (int i = 0; i < grades.Length; i++)
-            {
-                Console.WriteLine("Enter grade:");
-                grades[i] = int.Parse(Console.ReadLine());
-            }
+            //for (int i = 0; i < grades.Length; i++)
+            //{
+            //    Console.WriteLine("Enter grade:");
+            //    grades[i] = int.Parse(Console.ReadLine());
+            //}
 
-            Console.WriteLine("Student Grades:");
+            //Console.WriteLine("Student Grades:");
 
-            foreach (int grade in grades)
-            {
-                Console.WriteLine(grade);
-            }
+            //foreach (int grade in grades)
+            //{
+            //    Console.WriteLine(grade);
+            //}
+            //////////////////////////////////////////////////////////////////////
+         
         }
     }
 }
