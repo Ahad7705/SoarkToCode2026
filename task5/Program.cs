@@ -95,39 +95,56 @@
             //////////////////////////////////////////////////////////////////////////////
             // Task 6 - Filtered Shopping List
 
-            List<string> shoppingList = new List<string>();
+            //List<string> shoppingList = new List<string>();
 
-            string item = "";
+            //string item = "";
 
-            while (item != "done")
+            //while (item != "done")
+            //{
+            //    Console.WriteLine("Enter item (or type done):");
+            //    item = Console.ReadLine();
+
+            //    if (item != "done")
+            //    {
+            //        shoppingList.Add(item);
+            //    }
+            //}
+
+            //Console.WriteLine("Shopping List Before Removal:");
+
+            //foreach (string product in shoppingList)
+            //{
+            //    Console.WriteLine(product);
+            //}
+
+            //Console.WriteLine("Enter item to remove:");
+            //string removeItem = Console.ReadLine();
+
+            //shoppingList.Remove(removeItem);
+
+            //Console.WriteLine("Shopping List After Removal:");
+
+            //foreach (string product in shoppingList)
+            //{
+            //    Console.WriteLine(product);
+            //}
+            ///////////////////////////////////////////////////////////////////
+            // Task 7 - High Score Podium
+
+            List<int> scores = new List<int>();
+
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine("Enter item (or type done):");
-                item = Console.ReadLine();
-
-                if (item != "done")
-                {
-                    shoppingList.Add(item);
-                }
+                Console.WriteLine("Enter score:");
+                scores.Add(int.Parse(Console.ReadLine()));
             }
 
-            Console.WriteLine("Shopping List Before Removal:");
+            scores.Sort();
+            scores.Reverse();
 
-            foreach (string product in shoppingList)
-            {
-                Console.WriteLine(product);
-            }
-
-            Console.WriteLine("Enter item to remove:");
-            string removeItem = Console.ReadLine();
-
-            shoppingList.Remove(removeItem);
-
-            Console.WriteLine("Shopping List After Removal:");
-
-            foreach (string product in shoppingList)
-            {
-                Console.WriteLine(product);
-            }
+            Console.WriteLine("1st Place: " + scores[0]);
+            Console.WriteLine("2nd Place: " + scores[1]);
+            Console.WriteLine("3rd Place: " + scores[2]);
         }
     }
 }
