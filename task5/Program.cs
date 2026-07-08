@@ -148,30 +148,77 @@
             ///////////////////////////////////////////////////////////////////////
             // Task 8 - Undo Last Action
 
-            Stack<string> actions = new Stack<string>();
+            //Stack<string> actions = new Stack<string>();
 
-            string action = "";
+            //string action = "";
 
-            while (action != "stop")
+            //while (action != "stop")
+            //{
+            //    Console.WriteLine("Enter action (or type stop):");
+            //    action = Console.ReadLine();
+
+            //    if (action != "stop")
+            //    {
+            //        actions.Push(action);
+            //    }
+            //}
+
+            //Console.WriteLine("Undo Action: " + actions.Pop());
+            //Console.WriteLine("Undo Action: " + actions.Pop());
+
+            //Console.WriteLine("Remaining Actions:");
+
+            //foreach (string item in actions)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            /////////////////////////////////////////////////////////////////////
+            // Task 9 - Calculate Average Function
+            static double CalculateAverage(List<int> grades)
             {
-                Console.WriteLine("Enter action (or type stop):");
-                action = Console.ReadLine();
+                int sum = 0;
 
-                if (action != "stop")
+                foreach (int grade in grades)
                 {
-                    actions.Push(action);
+                    sum += grade;
                 }
+
+                return (double)sum / grades.Count;
             }
 
-            Console.WriteLine("Undo Action: " + actions.Pop());
-            Console.WriteLine("Undo Action: " + actions.Pop());
-
-            Console.WriteLine("Remaining Actions:");
-
-            foreach (string item in actions)
+            // Task 9 - Find First Failing Function
+            static int FindFirstFailing(List<int> grades)
             {
-                Console.WriteLine(item);
+                return grades.Find(x => x < 60);
             }
+            // Task 9 - Grade Analyzer with Functions
+
+            List<int> gradesList = new List<int>();
+
+            Console.WriteLine("How many grades do you want to enter?");
+            int count = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("Enter grade:");
+                gradesList.Add(int.Parse(Console.ReadLine()));
+            }
+
+            double average = CalculateAverage(gradesList);
+
+            int failingGrade = FindFirstFailing(gradesList);
+
+            Console.WriteLine("Average = " + average);
+
+            if (failingGrade == 0)
+            {
+                Console.WriteLine("No failing grades found");
+            }
+            else
+            {
+                Console.WriteLine("First failing grade = " + failingGrade);
+            }
+
         }
     }
 }
