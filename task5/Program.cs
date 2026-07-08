@@ -174,51 +174,103 @@
             //}
             /////////////////////////////////////////////////////////////////////
             // Task 9 - Calculate Average Function
-            static double CalculateAverage(List<int> grades)
-            {
-                int sum = 0;
+            //static double CalculateAverage(List<int> grades)
+            //{
+            //    int sum = 0;
 
-                foreach (int grade in grades)
+            //    foreach (int grade in grades)
+            //    {
+            //        sum += grade;
+            //    }
+
+            //    return (double)sum / grades.Count;
+            //}
+
+            //// Task 9 - Grade Analyzer with Functions
+            //static int FindFirstFailing(List<int> grades)
+            //{
+            //    return grades.Find(x => x < 60);
+            //}
+
+            //List<int> gradesList = new List<int>();
+
+            //Console.WriteLine("How many grades do you want to enter?");
+            //int count = int.Parse(Console.ReadLine());
+
+            //for (int i = 0; i < count; i++)
+            //{
+            //    Console.WriteLine("Enter grade:");
+            //    gradesList.Add(int.Parse(Console.ReadLine()));
+            //}
+
+            //double average = CalculateAverage(gradesList);
+
+            //int failingGrade = FindFirstFailing(gradesList);
+
+            //Console.WriteLine("Average = " + average);
+
+            //if (failingGrade == 0)
+            //{
+            //    Console.WriteLine("No failing grades found");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("First failing grade = " + failingGrade);
+            //}
+            /////////////////////////////////////////////////////////////////////////////////
+            // Task 10 - Remove Job Function
+
+            static Queue<string> RemoveJob(Queue<string> jobs, string jobToRemove)
+            {
+                Queue<string> updatedQueue = new Queue<string>();
+
+                while (jobs.Count > 0)
                 {
-                    sum += grade;
+                    string currentJob = jobs.Dequeue();
+
+                    if (currentJob != jobToRemove)
+                    {
+                        updatedQueue.Enqueue(currentJob);
+                    }
                 }
 
-                return (double)sum / grades.Count;
+                return updatedQueue;
             }
+            
 
-            // Task 9 - Find First Failing Function
-            static int FindFirstFailing(List<int> grades)
+            Queue<string> printJobs = new Queue<string>();
+
+            string job = "";
+
+            while (job != "done")
             {
-                return grades.Find(x => x < 60);
+                Console.WriteLine("Enter print job (or type done):");
+                job = Console.ReadLine();
+
+                if (job != "done")
+                {
+                    printJobs.Enqueue(job);
+                }
             }
-            // Task 9 - Grade Analyzer with Functions
 
-            List<int> gradesList = new List<int>();
+            Console.WriteLine("Print Queue Before Cancellation:");
 
-            Console.WriteLine("How many grades do you want to enter?");
-            int count = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < count; i++)
+            foreach (string item in printJobs)
             {
-                Console.WriteLine("Enter grade:");
-                gradesList.Add(int.Parse(Console.ReadLine()));
+                Console.WriteLine(item);
             }
 
-            double average = CalculateAverage(gradesList);
+            Console.WriteLine("Enter job to cancel:");
+            string jobToCancel = Console.ReadLine();
 
-            int failingGrade = FindFirstFailing(gradesList);
+            printJobs = RemoveJob(printJobs, jobToCancel);
 
-            Console.WriteLine("Average = " + average);
+            Console.WriteLine("Print Queue After Cancellation:");
 
-            if (failingGrade == 0)
+            foreach (string item in printJobs)
             {
-                Console.WriteLine("No failing grades found");
+                Console.WriteLine(item);
             }
-            else
-            {
-                Console.WriteLine("First failing grade = " + failingGrade);
-            }
-
         }
     }
 }
