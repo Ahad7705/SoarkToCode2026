@@ -106,5 +106,22 @@ namespace MiniCompoundProject
             Console.WriteLine("Withdrawal Successful");
             Console.WriteLine("New Balance: " + balances[index]);
         }
+        static void ShowBalance()
+        {
+            Console.WriteLine("Enter Account Number:");
+            string accountNumber = Console.ReadLine();
+
+            int index = accountNumbers.IndexOf(accountNumber);
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found.");
+                return;
+            }
+
+            Console.WriteLine("Customer Name: " + customerNames[index]);
+            Console.WriteLine("Account Number: " + accountNumbers[index]);
+            Console.WriteLine("Balance: " + balances[index]);
+        }
     }
 }
