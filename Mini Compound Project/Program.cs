@@ -123,5 +123,52 @@ namespace MiniCompoundProject
             Console.WriteLine("Account Number: " + accountNumbers[index]);
             Console.WriteLine("Balance: " + balances[index]);
         }
+        static void TransferAmount()
+        {
+            Console.WriteLine("Enter Sender Account Number:");
+            string senderAccount = Console.ReadLine();
+
+            int senderIndex = accountNumbers.IndexOf(senderAccount);
+
+            if (senderIndex == -1)
+            {
+                Console.WriteLine("Sender account not found.");
+                return;
+            }
+
+            Console.WriteLine("Enter Receiver Account Number:");
+            string receiverAccount = Console.ReadLine();
+
+            int receiverIndex = accountNumbers.IndexOf(receiverAccount);
+
+            if (receiverIndex == -1)
+            {
+                Console.WriteLine("Receiver account not found.");
+                return;
+            }
+
+            Console.WriteLine("Enter Transfer Amount:");
+            double amount = Convert.ToDouble(Console.ReadLine());
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Amount must be positive.");
+                return;
+            }
+
+            if (amount > balances[senderIndex])
+            {
+                Console.WriteLine("Insufficient balance.");
+                return;
+            }
+
+            balances[senderIndex] -= amount;
+            balances[receiverIndex] += amount;
+
+            Console.WriteLine("Transfer Successful");
+
+            Console.WriteLine("Sender Balance: " + balances[senderIndex]);
+            Console.WriteLine("Receiver Balance: " + balances[receiverIndex]);
+        }
     }
 }
