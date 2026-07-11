@@ -170,5 +170,22 @@ namespace MiniCompoundProject
             Console.WriteLine("Sender Balance: " + balances[senderIndex]);
             Console.WriteLine("Receiver Balance: " + balances[receiverIndex]);
         }
+        static void ListAllAccounts()
+        {
+            if (customerNames.Count == 0)
+            {
+                Console.WriteLine("No accounts found.");
+                return;
+            }
+
+            for (int i = 0; i < customerNames.Count; i++)
+            {
+                Console.WriteLine("Customer Name: " + customerNames[i]);
+                Console.WriteLine("Account Number: " + accountNumbers[i]);
+                Console.WriteLine("Balance: " + balances[i]);
+                Console.WriteLine("--------------------");
+            }
+        }
+
     }
 }
