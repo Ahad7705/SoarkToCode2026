@@ -73,5 +73,38 @@ namespace MiniCompoundProject
             Console.WriteLine("Deposit Successful");
             Console.WriteLine("New Balance: " + balances[index]);
         }
+        static void WithdrawMoney()
+        {
+            Console.WriteLine("Enter Account Number:");
+            string accountNumber = Console.ReadLine();
+
+            int index = accountNumbers.IndexOf(accountNumber);
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found.");
+                return;
+            }
+
+            Console.WriteLine("Enter Withdrawal Amount:");
+            double amount = Convert.ToDouble(Console.ReadLine());
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Withdrawal amount must be positive.");
+                return;
+            }
+
+            if (amount > balances[index])
+            {
+                Console.WriteLine("Insufficient balance.");
+                return;
+            }
+
+            balances[index] -= amount;
+
+            Console.WriteLine("Withdrawal Successful");
+            Console.WriteLine("New Balance: " + balances[index]);
+        }
     }
 }
