@@ -16,7 +16,35 @@ namespace MiniCompoundProject
 
         static void AddAccount()
         {
+            Console.WriteLine("Enter Customer Name:");
+            string customerName = Console.ReadLine();
 
+            Console.WriteLine("Enter Account Number:");
+            string accountNumber = Console.ReadLine();
+
+            if (accountNumbers.Contains(accountNumber))
+            {
+                Console.WriteLine("Account number already exists.");
+                return;
+            }
+
+            Console.WriteLine("Enter Initial Deposit:");
+            double balance = Convert.ToDouble(Console.ReadLine());
+
+            if (balance < 0)
+            {
+                Console.WriteLine("Balance cannot be negative.");
+                return;
+            }
+
+            customerNames.Add(customerName);
+            accountNumbers.Add(accountNumber);
+            balances.Add(balance);
+
+            Console.WriteLine("Account Created Successfully");
+            Console.WriteLine("Customer: " + customerName);
+            Console.WriteLine("Account Number: " + accountNumber);
+            Console.WriteLine("Balance: " + balance);
         }
     }
 }
