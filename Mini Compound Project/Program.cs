@@ -186,6 +186,28 @@ namespace MiniCompoundProject
                 Console.WriteLine("--------------------");
             }
         }
+        static void FindRichestCustomer()
+        {
+            if (customerNames.Count == 0)
+            {
+                Console.WriteLine("No accounts found.");
+                return;
+            }
 
+            int richestIndex = 0;
+
+            for (int i = 1; i < balances.Count; i++)
+            {
+                if (balances[i] > balances[richestIndex])
+                {
+                    richestIndex = i;
+                }
+            }
+
+            Console.WriteLine("Richest Customer:");
+            Console.WriteLine("Customer Name: " + customerNames[richestIndex]);
+            Console.WriteLine("Account Number: " + accountNumbers[richestIndex]);
+            Console.WriteLine("Balance: " + balances[richestIndex]);
+        }
     }
 }
