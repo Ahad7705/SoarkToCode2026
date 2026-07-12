@@ -220,57 +220,58 @@
             /////////////////////////////////////////////////////////////////////////////////
             // Task 10 - Remove Job Function
 
-            static Queue<string> RemoveJob(Queue<string> jobs, string jobToRemove)
-            {
-                Queue<string> updatedQueue = new Queue<string>();
+            //static Queue<string> RemoveJob(Queue<string> jobs, string jobToRemove)
+            //{
+            //    Queue<string> updatedQueue = new Queue<string>();
 
-                while (jobs.Count > 0)
-                {
-                    string currentJob = jobs.Dequeue();
+            //    while (jobs.Count > 0)
+            //    {
+            //        string currentJob = jobs.Dequeue();
 
-                    if (currentJob != jobToRemove)
-                    {
-                        updatedQueue.Enqueue(currentJob);
-                    }
-                }
+            //        if (currentJob != jobToRemove)
+            //        {
+            //            updatedQueue.Enqueue(currentJob);
+            //        }
+            //    }
 
-                return updatedQueue;
-            }
+            //    return updatedQueue;
+            //}
             
 
-            Queue<string> printJobs = new Queue<string>();
+            //Queue<string> printJobs = new Queue<string>();
 
-            string job = "";
+            //string job = "";
 
-            while (job != "done")
-            {
-                Console.WriteLine("Enter print job (or type done):");
-                job = Console.ReadLine();
+            //while (job != "done")
+            //{
+            //    Console.WriteLine("Enter print job (or type done):");
+            //    job = Console.ReadLine();
 
-                if (job != "done")
-                {
-                    printJobs.Enqueue(job);
-                }
-            }
+            //    if (job != "done")
+            //    {
+            //        printJobs.Enqueue(job);
+            //    }
+            //}
 
-            Console.WriteLine("Print Queue Before Cancellation:");
+            //Console.WriteLine("Print Queue Before Cancellation:");
 
-            foreach (string item in printJobs)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (string item in printJobs)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            Console.WriteLine("Enter job to cancel:");
-            string jobToCancel = Console.ReadLine();
+            //Console.WriteLine("Enter job to cancel:");
+            //string jobToCancel = Console.ReadLine();
 
-            printJobs = RemoveJob(printJobs, jobToCancel);
+            //printJobs = RemoveJob(printJobs, jobToCancel);
 
-            Console.WriteLine("Print Queue After Cancellation:");
+            //Console.WriteLine("Print Queue After Cancellation:");
 
-            foreach (string item in printJobs)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (string item in printJobs)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            /////////////////////////////////////////////////////////////////////////////////////
         }
     }
 }
