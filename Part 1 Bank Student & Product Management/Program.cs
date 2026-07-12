@@ -2,65 +2,66 @@
 {
     public class BankAccount
     {
-        
-    }
+        public int AccountNumber { get; set; }
+        public string HolderName { get; set; }
+        public double Balance { get; set; }
 
-    public class Student
-    {
-        
-    }
-
-    
-    public class Product
-    {
-        public string ProductName { get; set; }
-        public double Price { get; set; }
-        public int StockQuantity { get; set; }
-
-        public void Sell(int quantity)
+        public void Deposit(double amount)
         {
-            if (StockQuantity >= quantity)
+            Balance += amount;
+        }
+
+        public void Withdraw(double amount)
+        {
+            if (Balance >= amount)
             {
-                StockQuantity -= quantity;
+                Balance -= amount;
             }
-            else
-            {
-                Console.WriteLine("Not enough stock.");
-            }
-
-            LogTransaction();
         }
 
-        public void Restock(int quantity)
+        public double CheckBalance()
         {
-            StockQuantity += quantity;
-            LogTransaction();
-        }
+            Console.WriteLine("Name: " + HolderName);
+            Console.WriteLine("Balance: " + Balance);
 
-        public double GetInventoryValue()
-        {
-            PrintDetails();
-            return Price * StockQuantity;
-        }
-
-        private void PrintDetails()
-        {
-            Console.WriteLine("Product Name: " + ProductName);
-            Console.WriteLine("Price: " + Price);
-            Console.WriteLine("Stock Quantity: " + StockQuantity);
-        }
-
-        private void LogTransaction()
-        {
-
+            return Balance;
         }
     }
-
     internal class Program
     {
         static void Main(string[] args)
         {
+            BankAccount B1 = new BankAccount();
+            B1.AccountNumber = 2001;
+            B1.HolderName = "Ahad";
+            B1.Balance = 500;
 
+            BankAccount B2 = new BankAccount();
+            B2.AccountNumber = 2002;
+            B2.HolderName = "Sara";
+            B2.Balance = 750;
+
+        }
+        static void ViewAccountDetails(BankAccount B1, BankAccount B2)
+        {
+            Console.WriteLine("Choose Account:");
+            Console.WriteLine("1. Ahad");
+            Console.WriteLine("2. Sara");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                B1.CheckBalance();
+            }
+            else if (choice == 2)
+            {
+                B2.CheckBalance();
+            }
+            else
+            {
+                Console.WriteLine("Invalid Choice");
+            }
         }
     }
 }
