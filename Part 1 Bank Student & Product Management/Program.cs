@@ -41,26 +41,31 @@
             B2.HolderName = "Sara";
             B2.Balance = 750;
 
+            ViewAccountDetails(B1, B2);
+
         }
         static void ViewAccountDetails(BankAccount B1, BankAccount B2)
         {
-            Console.WriteLine("Choose Account:");
-            Console.WriteLine("1. Ahad");
-            Console.WriteLine("2. Sara");
+            static void ViewAccountDetails(BankAccount B1, BankAccount B2)
+            {
+                Console.WriteLine("Choose Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
 
-            int choice = Convert.ToInt32(Console.ReadLine());
+                int choice = Convert.ToInt32(Console.ReadLine());
 
-            if (choice == 1)
-            {
-                B1.CheckBalance();
-            }
-            else if (choice == 2)
-            {
-                B2.CheckBalance();
-            }
-            else
-            {
-                Console.WriteLine("Invalid Choice");
+                if (choice == 1)
+                {
+                    B1.CheckBalance();
+                }
+                else if (choice == 2)
+                {
+                    B2.CheckBalance();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                }
             }
         }
     }
