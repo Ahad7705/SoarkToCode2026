@@ -166,25 +166,121 @@
                 p2.Price = 15.750;
                 p2.StockQuantity = 20;
 
-                ViewAccountDetails(B1, B2);
-                UpdateStudentAddress(s1, s2);
-                MakeDeposit(B1, B2);
-                MakeWithdrawal(B1, B2);
-                ViewProductDetails(p1, p2);
-                RegisterStudent(s1, s2);
-                CompareAccountBalances(B1, B2);
-                RestockProduct(p1, p2);
-                TransferBetweenAccounts(B1, B2);
-                UpdateStudentGrade(s1,s2);
-                StudentReportCard(s1,s2);
-                AccountHealthStatus(B1,B2);
-                BulkSaleWithRevenue(p1,p2);
-                ScholarshipEligibilityCheck(s1, s2, B1, B2);
-                FullBalanceTopUpFlow(B1, B2);
-                QuickAccountOpening();
-                TotalStudentsCounter();
-                OverdrawnAccountCheck(B1, B2);
-                SetStudentSecurityPin(s1,s2);
+                bool exitApp = false;
+
+                while (!exitApp)
+                {
+                    Console.WriteLine("1. View Account Details");
+                    Console.WriteLine("2. Update Student Address");
+                    Console.WriteLine("3. Make a Deposit");
+                    Console.WriteLine("4. Make a Withdrawal");
+                    Console.WriteLine("5. View Product Details");
+                    Console.WriteLine("6. Register a Student");
+                    Console.WriteLine("7. Compare Two Account Balances");
+                    Console.WriteLine("8. Restock Product");
+                    Console.WriteLine("9. Transfer Between Accounts");
+                    Console.WriteLine("10. Update Student Grade");
+                    Console.WriteLine("11. Student Report Card");
+                    Console.WriteLine("12. Account Health Status");
+                    Console.WriteLine("13. Bulk Sale With Revenue");
+                    Console.WriteLine("14. Scholarship Eligibility Check");
+                    Console.WriteLine("15. Full Balance Top-Up Flow");
+                    Console.WriteLine("16. Quick Account Opening");
+                    Console.WriteLine("17. Total Students Counter");
+                    Console.WriteLine("18. Overdrawn Account Check");
+                    Console.WriteLine("19. Set Student Security PIN");
+                    Console.WriteLine("20. Exit");
+
+                    int choice = Convert.ToInt32(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            ViewAccountDetails(B1, B2);
+                            break;
+
+                        case 2:
+                            UpdateStudentAddress(s1, s2);
+                            break;
+
+                        case 3:
+                            MakeDeposit(B1, B2);
+                            break;
+
+                        case 4:
+                            MakeWithdrawal(B1, B2);
+                            break;
+
+                        case 5:
+                            ViewProductDetails(p1, p2);
+                            break;
+
+                        case 6:
+                            RegisterStudent(s1, s2);
+                            break;
+
+                        case 7:
+                            CompareAccountBalances(B1, B2);
+                            break;
+
+                        case 8:
+                            RestockProduct(p1, p2);
+                            break;
+
+                        case 9:
+                            TransferBetweenAccounts(B1, B2);
+                            break;
+
+                        case 10:
+                            UpdateStudentGrade(s1, s2);
+                            break;
+
+                        case 11:
+                            StudentReportCard(s1, s2);
+                            break;
+
+                        case 12:
+                            AccountHealthStatus(B1, B2);
+                            break;
+
+                        case 13:
+                            BulkSaleWithRevenue(p1, p2);
+                            break;
+
+                        case 14:
+                            ScholarshipEligibilityCheck(s1, s2, B1, B2);
+                            break;
+
+                        case 15:
+                            FullBalanceTopUpFlow(B1, B2);
+                            break;
+
+                        case 16:
+                            QuickAccountOpening();
+                            break;
+
+                        case 17:
+                            TotalStudentsCounter();
+                            break;
+
+                        case 18:
+                            OverdrawnAccountCheck(B1, B2);
+                            break;
+
+                        case 19:
+                            SetStudentSecurityPin(s1, s2);
+                            break;
+
+                        case 20:
+                            exitApp = true;
+                            Console.WriteLine("Goodbye!");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid Choice");
+                            break;
+                    }
+                }
 
             }
 
