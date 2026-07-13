@@ -20,6 +20,7 @@
         public void Deposit(double amount)
         {
             Balance += amount;
+             SendEmail();
         }
 
         public void Withdraw(double amount)
@@ -28,12 +29,12 @@
             {
                 Balance -= amount;
             }
+            SendEmail();
         }
 
         public double CheckBalance()
         {
-            Console.WriteLine("Name: " + HolderName);
-            Console.WriteLine("Balance: " + Balance);
+            PrintInformation();
 
             return Balance;
         }
@@ -43,6 +44,15 @@
             {
                 return Balance < 0;
             }
+        }
+        private void PrintInformation()
+        {
+            Console.WriteLine("Name: " + HolderName);
+            Console.WriteLine("Balance: " + Balance);
+        }
+        private void SendEmail()
+        {
+
         }
     }
 
@@ -85,52 +95,52 @@
         }
     }
 
-        public class Product
+    public class Product
+    {
+        public string ProductName { get; set; }
+        public double Price { get; set; }
+        public int StockQuantity { get; set; }
+
+        public void Sell(int quantity)
         {
-            public string ProductName { get; set; }
-            public double Price { get; set; }
-            public int StockQuantity { get; set; }
-
-            public void Sell(int quantity)
+            if (StockQuantity >= quantity)
             {
-                if (StockQuantity >= quantity)
-                {
-                    StockQuantity -= quantity;
-                }
-                else
-                {
-                    Console.WriteLine("Not enough stock.");
-                }
-
-                LogTransaction();
+                StockQuantity -= quantity;
+            }
+            else
+            {
+                Console.WriteLine("Not enough stock.");
             }
 
-            public void Restock(int quantity)
-            {
-                StockQuantity += quantity;
+            LogTransaction();
+        }
 
-                LogTransaction();
-            }
+        public void Restock(int quantity)
+        {
+            StockQuantity += quantity;
 
-            public double GetInventoryValue()
-            {
-                PrintDetails();
+            LogTransaction();
+        }
 
-                return Price * StockQuantity;
-            }
+        public double GetInventoryValue()
+        {
+            PrintDetails();
 
-            private void PrintDetails()
-            {
-                Console.WriteLine("Product Name: " + ProductName);
-                Console.WriteLine("Price: " + Price);
-                Console.WriteLine("Stock Quantity: " + StockQuantity);
-            }
+            return Price * StockQuantity;
+        }
 
-            private void LogTransaction()
-            {
+        private void PrintDetails()
+        {
+            Console.WriteLine("Product Name: " + ProductName);
+            Console.WriteLine("Price: " + Price);
+            Console.WriteLine("Stock Quantity: " + StockQuantity);
+        }
 
-            }
+        private void LogTransaction()
+        {
 
+        }
+    }
 
             internal class Program
         {
@@ -894,5 +904,5 @@
             }
         }
     }
-}
+
 
