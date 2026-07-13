@@ -48,6 +48,8 @@
         {
 
         }
+    }
+
         public class Product
         {
             public string ProductName { get; set; }
@@ -93,10 +95,9 @@
             {
 
             }
-        }
 
 
-        internal class Program
+            internal class Program
         {
             static void Main(string[] args)
             {
@@ -133,8 +134,7 @@
                 ViewAccountDetails(B1, B2);
                 UpdateStudentAddress(s1, s2);
                 MakeDeposit(B1, B2);
-
-
+                MakeWithdrawal(B1, B2);
 
             }
 
@@ -211,6 +211,34 @@
                     B2.Deposit(amount);
 
                     Console.WriteLine("Holder Name: " + B2.HolderName);
+                    Console.WriteLine("Updated Balance: " + B2.Balance);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                }
+            }
+            static void MakeWithdrawal(BankAccount B1, BankAccount B2)
+            {
+                Console.WriteLine("Choose Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Withdrawal Amount:");
+                double amount = Convert.ToDouble(Console.ReadLine());
+
+                if (choice == 1)
+                {
+                    B1.Withdraw(amount);
+
+                    Console.WriteLine("Updated Balance: " + B1.Balance);
+                }
+                else if (choice == 2)
+                {
+                    B2.Withdraw(amount);
+
                     Console.WriteLine("Updated Balance: " + B2.Balance);
                 }
                 else
