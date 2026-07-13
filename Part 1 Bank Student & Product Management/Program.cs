@@ -136,6 +136,7 @@
                 MakeDeposit(B1, B2);
                 MakeWithdrawal(B1, B2);
                 ViewProductDetails(p1, p2);
+                RegisterStudent(s1, s2);
 
             }
 
@@ -266,6 +267,32 @@
                     double value = p2.GetInventoryValue();
 
                     Console.WriteLine("Inventory Value: " + value);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                }
+            }
+            static void RegisterStudent(Student s1, Student s2)
+            {
+                Console.WriteLine("Choose Student:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Email:");
+                string email = Console.ReadLine();
+
+                if (choice == 1)
+                {
+                    s1.Register(email);
+                    Console.WriteLine("Student Registered Successfully");
+                }
+                else if (choice == 2)
+                {
+                    s2.Register(email);
+                    Console.WriteLine("Student Registered Successfully");
                 }
                 else
                 {
