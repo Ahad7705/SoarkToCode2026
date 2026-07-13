@@ -41,6 +41,11 @@
 
     public class Student
     {
+        public static int StudentCount = 0;
+        public Student()
+        {
+            StudentCount++;
+        }
         public int Grade { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
@@ -58,6 +63,10 @@
         private void SendEmail()
         {
 
+        }
+        public static int GetStudentCount()
+        {
+            return StudentCount;
         }
     }
 
@@ -158,6 +167,7 @@
                 ScholarshipEligibilityCheck(s1, s2, B1, B2);
                 FullBalanceTopUpFlow(B1, B2);
                 QuickAccountOpening();
+                TotalStudentsCounter();
 
             }
 
@@ -704,6 +714,11 @@
                 Console.WriteLine("Account Number: " + newAccount.AccountNumber);
                 Console.WriteLine("Holder Name: " + newAccount.HolderName);
                 Console.WriteLine("Balance: " + newAccount.Balance);
+            }
+            static void TotalStudentsCounter()
+            {
+                Console.WriteLine("Total Students: "
+                    + Student.GetStudentCount());
             }
         }
     }
