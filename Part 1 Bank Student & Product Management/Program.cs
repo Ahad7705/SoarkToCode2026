@@ -141,6 +141,7 @@
                 RestockProduct(p1, p2);
                 TransferBetweenAccounts(B1, B2);
                 UpdateStudentGrade(s1,s2);
+                StudentReportCard(s1,s2);
 
             }
 
@@ -452,6 +453,43 @@
                 else
                 {
                     Console.WriteLine("Invalid Choice");
+                }
+            }
+            static void StudentReportCard(Student s1, Student s2)
+            {
+                Console.WriteLine("Choose Student:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Student selectedStudent;
+
+                if (choice == 1)
+                {
+                    selectedStudent = s1;
+                }
+                else if (choice == 2)
+                {
+                    selectedStudent = s2;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                    return;
+                }
+
+                Console.WriteLine("Name: " + selectedStudent.Name);
+                Console.WriteLine("Address: " + selectedStudent.Address);
+                Console.WriteLine("Grade: " + selectedStudent.Grade);
+
+                if (selectedStudent.Grade >= 60)
+                {
+                    Console.WriteLine("Result: Pass");
+                }
+                else
+                {
+                    Console.WriteLine("Result: Fail");
                 }
             }
         }
