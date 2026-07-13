@@ -180,6 +180,7 @@
 
                 while (!exitApp)
                 {
+
                     Console.WriteLine("1. View Account Details");
                     Console.WriteLine("2. Update Student Address");
                     Console.WriteLine("3. Make a Deposit");
@@ -901,6 +902,7 @@
                 {
                     Console.WriteLine("Invalid Choice");
                 }
+                ///////////////////////////////////////////////////////////////
             }
         }
     }
