@@ -143,6 +143,7 @@
                 UpdateStudentGrade(s1,s2);
                 StudentReportCard(s1,s2);
                 AccountHealthStatus(B1,B2);
+                BulkSaleWithRevenue(p1,p2);
 
             }
 
@@ -528,6 +529,50 @@
                 else
                 {
                     Console.WriteLine("Premium");
+                }
+            }
+            static void BulkSaleWithRevenue(Product p1, Product p2)
+            {
+                Console.WriteLine("Choose Product:");
+                Console.WriteLine("1. Wireless Mouse");
+                Console.WriteLine("2. Mechanical Keyboard");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Quantity:");
+                int quantity = Convert.ToInt32(Console.ReadLine());
+
+                Product selectedProduct;
+
+                if (choice == 1)
+                {
+                    selectedProduct = p1;
+                }
+                else if (choice == 2)
+                {
+                    selectedProduct = p2;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                    return;
+                }
+
+                if (selectedProduct.StockQuantity < quantity)
+                {
+                    int needed = quantity - selectedProduct.StockQuantity;
+
+                    Console.WriteLine("Not enough stock.");
+                    Console.WriteLine("Need " + needed + " more units.");
+                }
+                else
+                {
+                    selectedProduct.Sell(quantity);
+
+                    double revenue = quantity * selectedProduct.Price;
+
+                    Console.WriteLine("Sale Successful");
+                    Console.WriteLine("Revenue: " + revenue);
                 }
             }
         }
