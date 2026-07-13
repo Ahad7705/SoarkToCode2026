@@ -145,6 +145,7 @@
                 AccountHealthStatus(B1,B2);
                 BulkSaleWithRevenue(p1,p2);
                 ScholarshipEligibilityCheck(s1, s2, B1, B2);
+                FullBalanceTopUpFlow(B1, B2);
 
             }
 
@@ -631,6 +632,46 @@
                     {
                         Console.WriteLine("Account balance is below 100.");
                     }
+                }
+            }
+            static void FullBalanceTopUpFlow(BankAccount B1, BankAccount B2)
+            {
+                Console.WriteLine("Choose Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                BankAccount selectedAccount;
+
+                if (choice == 1)
+                {
+                    selectedAccount = B1;
+                }
+                else if (choice == 2)
+                {
+                    selectedAccount = B2;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                    return;
+                }
+
+                if (selectedAccount.Balance < 50)
+                {
+                    double beforeBalance = selectedAccount.Balance;
+
+                    double topUpAmount = 100 - selectedAccount.Balance;
+
+                    selectedAccount.Deposit(topUpAmount);
+
+                    Console.WriteLine("Balance Before: " + beforeBalance);
+                    Console.WriteLine("Balance After: " + selectedAccount.Balance);
+                }
+                else
+                {
+                    Console.WriteLine("No top-up needed.");
                 }
             }
         }
