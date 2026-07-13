@@ -138,6 +138,7 @@
                 ViewProductDetails(p1, p2);
                 RegisterStudent(s1, s2);
                 CompareAccountBalances(B1, B2);
+                RestockProduct(p1, p2);
 
             }
 
@@ -313,6 +314,56 @@
                 else
                 {
                     Console.WriteLine("Both accounts have the same balance.");
+                }
+            }
+            static void RestockProduct(Product p1, Product p2)
+            {
+                Console.WriteLine("Choose Product:");
+                Console.WriteLine("1. Wireless Mouse");
+                Console.WriteLine("2. Mechanical Keyboard");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Quantity:");
+                int quantity = Convert.ToInt32(Console.ReadLine());
+
+                if (choice == 1)
+                {
+                    p1.Restock(quantity);
+
+                    if (p1.StockQuantity < 10)
+                    {
+                        Console.WriteLine("Low");
+                    }
+                    else if (p1.StockQuantity < 50)
+                    {
+                        Console.WriteLine("Moderate");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Well Stocked");
+                    }
+                }
+                else if (choice == 2)
+                {
+                    p2.Restock(quantity);
+
+                    if (p2.StockQuantity < 10)
+                    {
+                        Console.WriteLine("Low");
+                    }
+                    else if (p2.StockQuantity < 50)
+                    {
+                        Console.WriteLine("Moderate");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Well Stocked");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
                 }
             }
         }
