@@ -135,6 +135,7 @@
                 UpdateStudentAddress(s1, s2);
                 MakeDeposit(B1, B2);
                 MakeWithdrawal(B1, B2);
+                ViewProductDetails(p1, p2);
 
             }
 
@@ -240,6 +241,31 @@
                     B2.Withdraw(amount);
 
                     Console.WriteLine("Updated Balance: " + B2.Balance);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                }
+            }
+            static void ViewProductDetails(Product p1, Product p2)
+            {
+                Console.WriteLine("Choose Product:");
+                Console.WriteLine("1. Wireless Mouse");
+                Console.WriteLine("2. Mechanical Keyboard");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                if (choice == 1)
+                {
+                    double value = p1.GetInventoryValue();
+
+                    Console.WriteLine("Inventory Value: " + value);
+                }
+                else if (choice == 2)
+                {
+                    double value = p2.GetInventoryValue();
+
+                    Console.WriteLine("Inventory Value: " + value);
                 }
                 else
                 {
