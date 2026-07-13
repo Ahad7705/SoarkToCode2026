@@ -144,6 +144,7 @@
                 StudentReportCard(s1,s2);
                 AccountHealthStatus(B1,B2);
                 BulkSaleWithRevenue(p1,p2);
+                ScholarshipEligibilityCheck(s1, s2, B1, B2);
 
             }
 
@@ -573,6 +574,63 @@
 
                     Console.WriteLine("Sale Successful");
                     Console.WriteLine("Revenue: " + revenue);
+                }
+            }
+            static void ScholarshipEligibilityCheck(
+    Student s1,
+    Student s2,
+    BankAccount B1,
+    BankAccount B2)
+            {
+                Console.WriteLine("Choose Student:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int studentChoice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Choose Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int accountChoice = Convert.ToInt32(Console.ReadLine());
+
+                Student selectedStudent;
+                BankAccount selectedAccount;
+
+                if (studentChoice == 1)
+                {
+                    selectedStudent = s1;
+                }
+                else
+                {
+                    selectedStudent = s2;
+                }
+
+                if (accountChoice == 1)
+                {
+                    selectedAccount = B1;
+                }
+                else
+                {
+                    selectedAccount = B2;
+                }
+
+                if (selectedStudent.Grade >= 80 &&
+                    selectedAccount.Balance >= 100)
+                {
+                    Console.WriteLine("Eligible");
+                }
+                else
+                {
+                    if (selectedStudent.Grade < 80)
+                    {
+                        Console.WriteLine("Student grade is below 80.");
+                    }
+
+                    if (selectedAccount.Balance < 100)
+                    {
+                        Console.WriteLine("Account balance is below 100.");
+                    }
                 }
             }
         }
