@@ -137,6 +137,7 @@
                 MakeWithdrawal(B1, B2);
                 ViewProductDetails(p1, p2);
                 RegisterStudent(s1, s2);
+                CompareAccountBalances(B1, B2);
 
             }
 
@@ -297,6 +298,21 @@
                 else
                 {
                     Console.WriteLine("Invalid Choice");
+                }
+            }
+            static void CompareAccountBalances(BankAccount B1, BankAccount B2)
+            {
+                if (B1.Balance > B2.Balance)
+                {
+                    Console.WriteLine(B1.HolderName + " has a higher balance.");
+                }
+                else if (B2.Balance > B1.Balance)
+                {
+                    Console.WriteLine(B2.HolderName + " has a higher balance.");
+                }
+                else
+                {
+                    Console.WriteLine("Both accounts have the same balance.");
                 }
             }
         }
