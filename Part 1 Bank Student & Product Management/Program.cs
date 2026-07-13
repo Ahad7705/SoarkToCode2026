@@ -142,6 +142,7 @@
                 TransferBetweenAccounts(B1, B2);
                 UpdateStudentGrade(s1,s2);
                 StudentReportCard(s1,s2);
+                AccountHealthStatus(B1,B2);
 
             }
 
@@ -490,6 +491,43 @@
                 else
                 {
                     Console.WriteLine("Result: Fail");
+                }
+            }
+            static void AccountHealthStatus(BankAccount B1, BankAccount B2)
+            {
+                Console.WriteLine("Choose Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                BankAccount selectedAccount;
+
+                if (choice == 1)
+                {
+                    selectedAccount = B1;
+                }
+                else if (choice == 2)
+                {
+                    selectedAccount = B2;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                    return;
+                }
+
+                if (selectedAccount.Balance < 50)
+                {
+                    Console.WriteLine("Low Balance");
+                }
+                else if (selectedAccount.Balance <= 1000)
+                {
+                    Console.WriteLine("Healthy");
+                }
+                else
+                {
+                    Console.WriteLine("Premium");
                 }
             }
         }
