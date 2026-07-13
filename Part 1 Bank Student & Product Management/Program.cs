@@ -37,6 +37,13 @@
 
             return Balance;
         }
+        public bool IsOverdrawn
+        {
+            get
+            {
+                return Balance < 0;
+            }
+        }
     }
 
     public class Student
@@ -168,6 +175,7 @@
                 FullBalanceTopUpFlow(B1, B2);
                 QuickAccountOpening();
                 TotalStudentsCounter();
+                OverdrawnAccountCheck(B1, B2);
 
             }
 
@@ -719,6 +727,39 @@
             {
                 Console.WriteLine("Total Students: "
                     + Student.GetStudentCount());
+            }
+            static void OverdrawnAccountCheck(BankAccount B1, BankAccount B2)
+            {
+                Console.WriteLine("Choose Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                BankAccount selectedAccount;
+
+                if (choice == 1)
+                {
+                    selectedAccount = B1;
+                }
+                else if (choice == 2)
+                {
+                    selectedAccount = B2;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
+                    return;
+                }
+
+                if (selectedAccount.IsOverdrawn)
+                {
+                    Console.WriteLine("Account is overdrawn.");
+                }
+                else
+                {
+                    Console.WriteLine("Account is not overdrawn.");
+                }
             }
         }
     }
