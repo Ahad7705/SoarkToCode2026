@@ -140,6 +140,7 @@
                 CompareAccountBalances(B1, B2);
                 RestockProduct(p1, p2);
                 TransferBetweenAccounts(B1, B2);
+                UpdateStudentGrade(s1,s2);
 
             }
 
@@ -415,6 +416,42 @@
                 else
                 {
                     Console.WriteLine("Insufficient Balance");
+                }
+            }
+            static void UpdateStudentGrade(Student s1, Student s2)
+            {
+                Console.WriteLine("Choose Student:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter New Grade:");
+                int grade = Convert.ToInt32(Console.ReadLine());
+
+                if (grade < 0 || grade > 100)
+                {
+                    Console.WriteLine("Invalid Grade");
+                    return;
+                }
+
+                if (choice == 1)
+                {
+                    s1.Grade = grade;
+
+                    Console.WriteLine("Grade Updated Successfully");
+                    Console.WriteLine("New Grade: " + s1.Grade);
+                }
+                else if (choice == 2)
+                {
+                    s2.Grade = grade;
+
+                    Console.WriteLine("Grade Updated Successfully");
+                    Console.WriteLine("New Grade: " + s2.Grade);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
                 }
             }
         }
