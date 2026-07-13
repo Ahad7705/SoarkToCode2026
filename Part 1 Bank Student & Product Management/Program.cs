@@ -139,6 +139,7 @@
                 RegisterStudent(s1, s2);
                 CompareAccountBalances(B1, B2);
                 RestockProduct(p1, p2);
+                TransferBetweenAccounts(B1, B2);
 
             }
 
@@ -364,6 +365,56 @@
                 else
                 {
                     Console.WriteLine("Invalid Choice");
+                }
+            }
+            static void TransferBetweenAccounts(BankAccount B1, BankAccount B2)
+            {
+                Console.WriteLine("Choose Source Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int source = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Choose Destination Account:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int destination = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Transfer Amount:");
+                double amount = Convert.ToDouble(Console.ReadLine());
+
+                BankAccount sourceAccount;
+                BankAccount destinationAccount;
+
+                if (source == 1)
+                {
+                    sourceAccount = B1;
+                }
+                else
+                {
+                    sourceAccount = B2;
+                }
+
+                if (destination == 1)
+                {
+                    destinationAccount = B1;
+                }
+                else
+                {
+                    destinationAccount = B2;
+                }
+
+                if (sourceAccount.Balance >= amount)
+                {
+                    sourceAccount.Withdraw(amount);
+                    destinationAccount.Deposit(amount);
+
+                    Console.WriteLine("Transfer Successful");
+                }
+                else
+                {
+                    Console.WriteLine("Insufficient Balance");
                 }
             }
         }
