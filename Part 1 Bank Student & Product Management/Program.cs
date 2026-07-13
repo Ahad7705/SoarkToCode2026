@@ -2,6 +2,17 @@
 {
     public class BankAccount
     {
+        public BankAccount()
+        {
+
+        }
+
+        public BankAccount(int accountNumber, string holderName, double balance)
+        {
+            AccountNumber = accountNumber;
+            HolderName = holderName;
+            Balance = balance;
+        }
         public int AccountNumber { get; set; }
         public string HolderName { get; set; }
         public double Balance { get; set; }
@@ -146,6 +157,7 @@
                 BulkSaleWithRevenue(p1,p2);
                 ScholarshipEligibilityCheck(s1, s2, B1, B2);
                 FullBalanceTopUpFlow(B1, B2);
+                QuickAccountOpening();
 
             }
 
@@ -673,6 +685,25 @@
                 {
                     Console.WriteLine("No top-up needed.");
                 }
+            }
+            static void QuickAccountOpening()
+            {
+                Console.WriteLine("Enter Account Number:");
+                int accountNumber = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Holder Name:");
+                string holderName = Console.ReadLine();
+
+                Console.WriteLine("Enter Starting Balance:");
+                double balance = Convert.ToDouble(Console.ReadLine());
+
+                BankAccount newAccount =
+                    new BankAccount(accountNumber, holderName, balance);
+
+                Console.WriteLine("Account Created Successfully");
+                Console.WriteLine("Account Number: " + newAccount.AccountNumber);
+                Console.WriteLine("Holder Name: " + newAccount.HolderName);
+                Console.WriteLine("Balance: " + newAccount.Balance);
             }
         }
     }
