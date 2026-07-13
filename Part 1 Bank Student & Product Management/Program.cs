@@ -75,6 +75,14 @@
         {
             return StudentCount;
         }
+        private string pin;
+        public string SecurityPIN
+        {
+            set
+            {
+                pin = value;
+            }
+        }
     }
 
         public class Product
@@ -176,6 +184,7 @@
                 QuickAccountOpening();
                 TotalStudentsCounter();
                 OverdrawnAccountCheck(B1, B2);
+                SetStudentSecurityPin(s1,s2);
 
             }
 
@@ -759,6 +768,32 @@
                 else
                 {
                     Console.WriteLine("Account is not overdrawn.");
+                }
+            }
+            static void SetStudentSecurityPin(Student s1, Student s2)
+            {
+                Console.WriteLine("Choose Student:");
+                Console.WriteLine("1. Ahad");
+                Console.WriteLine("2. Sara");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter 4-Digit PIN:");
+                string pin = Console.ReadLine();
+
+                if (choice == 1)
+                {
+                    s1.SecurityPIN = pin;
+                    Console.WriteLine("PIN Set Successfully");
+                }
+                else if (choice == 2)
+                {
+                    s2.SecurityPIN = pin;
+                    Console.WriteLine("PIN Set Successfully");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Choice");
                 }
             }
         }
