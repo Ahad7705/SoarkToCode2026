@@ -171,6 +171,9 @@ namespace Hotel_Management_System_part2
                     case 14:
                         HighestRevenueBooking(guests, rooms);
                         break;
+                    case 15:
+                        GuestPaginationViewer(guests);
+                        break;
 
                     case 0:
                         exitApp = true;
@@ -741,6 +744,39 @@ namespace Hotel_Management_System_part2
                     Console.WriteLine("Guest Name: " + booking.GuestName);
                     Console.WriteLine("Room Number: " + booking.RoomNumber);
                     Console.WriteLine("Total Cost: " + booking.TotalCost);
+                }
+            }
+            static void GuestPaginationViewer(List<Guest> guests)
+            {
+                int pageSize = 3;
+
+                int totalGuests = guests.Count;
+
+                int totalPages =
+                    (int)Math.Ceiling((double)totalGuests / pageSize);
+
+                Console.Write("Enter Page Number: ");
+                int pageNumber = Convert.ToInt32(Console.ReadLine());
+
+                if (pageNumber < 1 || pageNumber > totalPages)
+                {
+                    Console.WriteLine("That page does not exist.");
+                    return;
+                }
+
+                var pageGuests = guests
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+
+                Console.WriteLine($"Page {pageNumber} of {totalPages}");
+
+                foreach (var guest in pageGuests)
+                {
+                    Console.WriteLine($"ID: {guest.GuestId}");
+                    Console.WriteLine($"Name: {guest.GuestName}");
+                    Console.WriteLine($"Room: {guest.RoomNumber}");
+                    Console.WriteLine("-------------------");
                 }
             }
         }
