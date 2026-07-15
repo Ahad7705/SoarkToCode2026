@@ -142,6 +142,7 @@ namespace Hotel_Management_System_part2
                         break;
 
                     case 5:
+                        ViewAllGuests(guests);
                         break;
 
                     case 0:
@@ -287,6 +288,29 @@ namespace Hotel_Management_System_part2
                     {
                         Console.WriteLine("Status: Booked");
                     }
+
+                    Console.WriteLine("------------------");
+                }
+            }
+            static void ViewAllGuests(List<Guest> guests)
+            {
+                if (guests.Count == 0)
+                {
+                    Console.WriteLine("No guests have been registered yet.");
+                    return;
+                }
+
+                Console.WriteLine("Total Guests: " + guests.Count);
+
+                var sortedGuests = guests.OrderBy(g => g.GuestName);
+
+                foreach (var guest in sortedGuests)
+                {
+                    Console.WriteLine("Guest ID: " + guest.GuestId);
+                    Console.WriteLine("Guest Name: " + guest.GuestName);
+                    Console.WriteLine("Room Number: " + guest.RoomNumber);
+                    Console.WriteLine("Check In Date: " + guest.CheckInDate);
+                    Console.WriteLine("Total Nights: " + guest.TotalNights);
 
                     Console.WriteLine("------------------");
                 }
