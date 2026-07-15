@@ -165,6 +165,9 @@ namespace Hotel_Management_System_part2
                     case 12:
                         RemoveUnavailableRooms(rooms, guests);
                         break;
+                    case 13:
+                        ExtendGuestStay(guests, rooms);
+                        break;
 
 
                     case 0:
@@ -662,6 +665,45 @@ namespace Hotel_Management_System_part2
                         Console.WriteLine(room);
                     }
                 }
+            }
+            static void ExtendGuestStay(List<Guest> guests, List<Room> rooms)
+            {
+                Console.Write("Enter Guest ID: ");
+                string guestId = Console.ReadLine();
+
+                Guest guest = guests.FirstOrDefault(g => g.GuestId == guestId);
+
+                if (guest == null)
+                {
+                    Console.WriteLine("Guest not found.");
+                    return;
+                }
+
+                if (guest.RoomNumber == "Not Assigned")
+                {
+                    Console.WriteLine("This guest has no active booking to extend.");
+                    return;
+                }
+
+                Console.Write("Enter Additional Nights: ");
+                int extraNights = Convert.ToInt32(Console.ReadLine());
+
+                if (extraNights <= 0)
+                {
+                    Console.WriteLine("Invalid number of nights.");
+                    return;
+                }
+
+                guest.TotalNights += extraNights;
+
+                Room room = rooms.FirstOrDefault(
+                    r => r.RoomNumber.ToString() == guest.RoomNumber);
+
+                double totalCost = guest.CalculateTotalCost(room.PricePerNight);
+
+                Console.WriteLine("Stay Extended Successfully");
+                Console.WriteLine("Total Nights: " + guest.TotalNights);
+                Console.WriteLine("New Total Cost: " + totalCost);
             }
         }
 
