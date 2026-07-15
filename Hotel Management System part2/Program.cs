@@ -159,6 +159,9 @@ namespace Hotel_Management_System_part2
                     case 10:
                         RoomTypeBreakdownReport(rooms);
                         break;
+                    case 11:
+                        CheckOutGuest(guests, rooms);
+                        break;
 
                     case 0:
                         exitApp = true;
@@ -557,6 +560,59 @@ namespace Hotel_Management_System_part2
 
                 Console.WriteLine("Overall Average Price: " +
                     rooms.Average(r => r.PricePerNight).ToString("F2"));
+            }
+            static void CheckOutGuest(List<Guest> guests, List<Room> rooms)
+            {
+                Console.Write("Enter Guest ID: ");
+                string guestId = Console.ReadLine();
+
+                Guest guest = guests.FirstOrDefault(g => g.GuestId == guestId);
+
+                if (guest == null)
+                {
+                    Console.WriteLine("Guest not found.");
+                    return;
+                }
+
+                if (guest.RoomNumber == "Not Assigned")
+                {
+                    Console.WriteLine("This guest has no active booking.");
+                    return;
+                }
+
+                int roomNumber = Convert.ToInt32(guest.RoomNumber);
+
+                Room room = rooms.FirstOrDefault(r => r.RoomNumber == roomNumber);
+
+                if (room == null)
+                {
+                    Console.WriteLine("Room not found.");
+                    return;
+                }
+
+                double totalCost = guest.CalculateTotalCost(room.PricePerNight);
+
+                Console.WriteLine("Guest Name: " + guest.GuestName);
+                Console.WriteLine("Room Number: " + room.RoomNumber);
+                Console.WriteLine("Room Type: " + room.RoomType);
+                Console.WriteLine("Check In Date: " + guest.CheckInDate);
+                Console.WriteLine("Total Nights: " + guest.TotalNights);
+                Console.WriteLine("Price Per Night: " + room.PricePerNight);
+                Console.WriteLine("Total Cost: " + totalCost);
+
+                Console.Write("Confirm Checkout (Y/N): ");
+                string confirm = Console.ReadLine();
+
+                if (confirm.ToUpper() == "Y")
+                {
+                    room.IsAvailable = true;
+
+                    guests.Remove(guest);
+
+                    Console.WriteLine("Checkout completed successfully.");
+                    Console.WriteLine("Total Guests: " + guests.Count);
+                    Console.WriteLine("Total Rooms: " + rooms.Count);
+                }
             }
         }
 
