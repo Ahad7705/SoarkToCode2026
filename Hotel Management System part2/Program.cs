@@ -168,7 +168,9 @@ namespace Hotel_Management_System_part2
                     case 13:
                         ExtendGuestStay(guests, rooms);
                         break;
-
+                    case 14:
+                        HighestRevenueBooking(guests, rooms);
+                        break;
 
                     case 0:
                         exitApp = true;
@@ -704,6 +706,42 @@ namespace Hotel_Management_System_part2
                 Console.WriteLine("Stay Extended Successfully");
                 Console.WriteLine("Total Nights: " + guest.TotalNights);
                 Console.WriteLine("New Total Cost: " + totalCost);
+            }
+            static void HighestRevenueBooking(List<Guest> guests, List<Room> rooms)
+            {
+                var topBooking = guests
+                    .Where(g => g.RoomNumber != "Not Assigned")
+                    .Select(g =>
+                    {
+                        Room room = rooms.FirstOrDefault
+                        (
+                            r => r.RoomNumber.ToString() == g.RoomNumber
+                        );
+
+                        return new
+                        {
+                            GuestName = g.GuestName,
+                            RoomNumber = g.RoomNumber,
+                            TotalCost = g.CalculateTotalCost(room.PricePerNight)
+                        };
+                    })
+                    .OrderByDescending(x => x.TotalCost)
+                    .Take(1)
+                    .ToList();
+
+                if (topBooking.Count == 0)
+                {
+                    Console.WriteLine("No active bookings recorded.");
+                    return;
+                }
+
+                foreach (var booking in topBooking)
+                {
+                    Console.WriteLine("Highest Revenue Booking");
+                    Console.WriteLine("Guest Name: " + booking.GuestName);
+                    Console.WriteLine("Room Number: " + booking.RoomNumber);
+                    Console.WriteLine("Total Cost: " + booking.TotalCost);
+                }
             }
         }
 
