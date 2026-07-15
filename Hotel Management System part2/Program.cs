@@ -39,7 +39,110 @@
     {
         static void Main(string[] args)
         {
-            
+            List<Room> rooms = new List<Room>();
+            List<Guest> guests = new List<Guest>();
+
+            rooms.Add(new Room
+            {
+                RoomNumber = 101,
+                RoomType = "Single",
+                PricePerNight = 25,
+                IsAvailable = true
+            });
+
+            rooms.Add(new Room
+            {
+                RoomNumber = 102,
+                RoomType = "Single",
+                PricePerNight = 30,
+                IsAvailable = true
+            });
+
+            rooms.Add(new Room
+            {
+                RoomNumber = 201,
+                RoomType = "Double",
+                PricePerNight = 40,
+                IsAvailable = true
+            });
+
+            rooms.Add(new Room
+            {
+                RoomNumber = 202,
+                RoomType = "Double",
+                PricePerNight = 45,
+                IsAvailable = true
+            });
+
+            rooms.Add(new Room
+            {
+                RoomNumber = 301,
+                RoomType = "Suite",
+                PricePerNight = 80,
+                IsAvailable = true
+            });
+
+            rooms.Add(new Room
+            {
+                RoomNumber = 302,
+                RoomType = "Suite",
+                PricePerNight = 90,
+                IsAvailable = true
+            });
+            bool exitApp = false;
+
+            while (!exitApp)
+            {
+                Console.WriteLine("================================================");
+                Console.WriteLine("GRAND VISTA HOTEL - MANAGEMENT SYSTEM");
+                Console.WriteLine("================================================");
+
+                Console.WriteLine("1. Add New Room");
+                Console.WriteLine("2. Register New Guest");
+                Console.WriteLine("3. Book a Room for a Guest");
+                Console.WriteLine("4. View All Rooms");
+                Console.WriteLine("5. View All Guests");
+                Console.WriteLine("6. Search & Filter Rooms");
+                Console.WriteLine("7. Guest & Booking Statistics");
+                Console.WriteLine("8. Update Room Price");
+                Console.WriteLine("9. Guest Lookup by Name");
+                Console.WriteLine("10. Room Type Breakdown Report");
+                Console.WriteLine("11. Check Out a Guest");
+                Console.WriteLine("12. Remove Unavailable Rooms");
+                Console.WriteLine("13. Extend Guest Stay");
+                Console.WriteLine("14. Highest Revenue Booking");
+                Console.WriteLine("15. Guest Pagination Viewer");
+                Console.WriteLine("0. Exit");
+
+                Console.WriteLine("================================================");
+                Console.Write("Enter your choice: ");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        break;
+
+                    case 2:
+                        break;
+
+                    case 3:
+                        break;
+
+                    case 4:
+                        break;
+
+                    case 5:
+                        break;
+
+                    case 0:
+                        exitApp = true;
+                        break;
+                }
+            }
         }
+
     }
-}
+    }
+
