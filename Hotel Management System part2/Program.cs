@@ -138,6 +138,7 @@ namespace Hotel_Management_System_part2
                         break;
 
                     case 4:
+                        ViewAllRooms(rooms);
                         break;
 
                     case 5:
@@ -259,6 +260,36 @@ namespace Hotel_Management_System_part2
                 Console.WriteLine("Price Per Night: " + room.PricePerNight);
                 Console.WriteLine("Total Nights: " + guest.TotalNights);
                 Console.WriteLine("Total Cost: " + totalCost);
+            }
+            static void ViewAllRooms(List<Room> rooms)
+            {
+                if (rooms.Count == 0)
+                {
+                    Console.WriteLine("No rooms have been added yet.");
+                    return;
+                }
+
+                Console.WriteLine("Total Rooms: " + rooms.Count);
+
+                var sortedRooms = rooms.OrderBy(r => r.RoomNumber);
+
+                foreach (var room in sortedRooms)
+                {
+                    Console.WriteLine("Room Number: " + room.RoomNumber);
+                    Console.WriteLine("Room Type: " + room.RoomType);
+                    Console.WriteLine("Price Per Night: " + room.PricePerNight);
+
+                    if (room.IsAvailable)
+                    {
+                        Console.WriteLine("Status: Available");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Status: Booked");
+                    }
+
+                    Console.WriteLine("------------------");
+                }
             }
         }
 
