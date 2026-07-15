@@ -134,6 +134,7 @@ namespace Hotel_Management_System_part2
                         break;
 
                     case 3:
+                        BookRoomForGuest(guests, rooms);
                         break;
 
                     case 4:
@@ -216,6 +217,48 @@ namespace Hotel_Management_System_part2
                 Console.WriteLine("Guest Registered Successfully");
                 Console.WriteLine("Guest ID: " + guest.GuestId);
                 Console.WriteLine("Guest Name: " + guest.GuestName);
+            }
+            static void BookRoomForGuest(List<Guest> guests, List<Room> rooms)
+            {
+                Console.Write("Enter Guest ID: ");
+                string guestId = Console.ReadLine();
+
+                Console.Write("Enter Room Number: ");
+                int roomNumber = Convert.ToInt32(Console.ReadLine());
+
+                Guest guest = guests.FirstOrDefault(g => g.GuestId == guestId);
+                Room room = rooms.FirstOrDefault(r => r.RoomNumber == roomNumber);
+
+                if (guest == null)
+                {
+                    Console.WriteLine("Guest not found.");
+                    return;
+                }
+
+                if (room == null)
+                {
+                    Console.WriteLine("Room not found.");
+                    return;
+                }
+
+                if (!room.IsAvailable)
+                {
+                    Console.WriteLine("Room is already booked.");
+                    return;
+                }
+
+                guest.RoomNumber = room.RoomNumber.ToString();
+                room.IsAvailable = false;
+
+                double totalCost = guest.CalculateTotalCost(room.PricePerNight);
+
+                Console.WriteLine("Booking Successful");
+                Console.WriteLine("Guest Name: " + guest.GuestName);
+                Console.WriteLine("Room Number: " + room.RoomNumber);
+                Console.WriteLine("Room Type: " + room.RoomType);
+                Console.WriteLine("Price Per Night: " + room.PricePerNight);
+                Console.WriteLine("Total Nights: " + guest.TotalNights);
+                Console.WriteLine("Total Cost: " + totalCost);
             }
         }
 
