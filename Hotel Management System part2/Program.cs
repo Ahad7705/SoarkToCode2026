@@ -147,6 +147,10 @@ namespace Hotel_Management_System_part2
                     case 6:
                         SearchAndFilterRooms(rooms);
                         break;
+                    case 7:
+                        GuestBookingStatistics(guests, rooms);
+                        break;
+
                     case 0:
                         exitApp = true;
                         break;
@@ -405,6 +409,56 @@ namespace Hotel_Management_System_part2
                     default:
                         Console.WriteLine("Invalid Choice");
                         break;
+                }
+            }
+            static void GuestBookingStatistics(List<Guest> guests, List<Room> rooms)
+            {
+                Console.WriteLine("Total Guests: " + guests.Count());
+
+                Console.WriteLine("Booked Guests: " +
+                    guests.Count(g => g.RoomNumber != "Not Assigned"));
+
+                Console.WriteLine("Total Rooms: " + rooms.Count());
+
+                Console.WriteLine("Booked Rooms: " +
+                    rooms.Count(r => !r.IsAvailable));
+
+                var bookedGuests = guests
+                    .Where(g => g.RoomNumber != "Not Assigned")
+                    .ToList();
+
+                if (bookedGuests.Count == 0)
+                {
+                    Console.WriteLine("No active bookings recorded.");
+                    return;
+                }
+
+                Console.WriteLine("Average Nights: " +
+                    bookedGuests.Average(g => g.TotalNights));
+
+                var topGuests = bookedGuests
+                    .OrderByDescending(g => g.TotalNights)
+                    .Take(3)
+                    .ToList();
+
+                Console.WriteLine("Top 3 Guests:");
+
+                foreach (var guest in topGuests)
+                {
+                    Console.WriteLine(
+                        $"{guest.GuestName} - Room {guest.RoomNumber} - {guest.TotalNights} Nights");
+                }
+
+                var summaries = bookedGuests
+                    .Select(g =>
+                        $"{g.GuestName} - Room {g.RoomNumber} - {g.TotalNights} Nights")
+                    .ToList();
+
+                Console.WriteLine("Guest Summary:");
+
+                foreach (var summary in summaries)
+                {
+                    Console.WriteLine(summary);
                 }
             }
         }
