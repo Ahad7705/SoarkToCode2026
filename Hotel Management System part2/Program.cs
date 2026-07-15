@@ -153,6 +153,9 @@ namespace Hotel_Management_System_part2
                     case 8:
                         UpdateRoomPrice(rooms);
                         break;
+                    case 9:
+                        GuestLookupByName(guests);
+                        break;
 
                     case 0:
                         exitApp = true;
@@ -493,6 +496,33 @@ namespace Hotel_Management_System_part2
                 Console.WriteLine("Room price updated successfully.");
                 Console.WriteLine("Old Price: " + oldPrice);
                 Console.WriteLine("New Price: " + room.PricePerNight);
+            }
+            static void GuestLookupByName(List<Guest> guests)
+            {
+                Console.Write("Enter Guest Name: ");
+                string searchName = Console.ReadLine();
+
+                var matchedGuests = guests
+                    .Where(g => g.GuestName
+                    .ToLower()
+                    .Contains(searchName.ToLower()))
+                    .ToList();
+
+                if (matchedGuests.Count == 0)
+                {
+                    Console.WriteLine("No guests matched that search.");
+                    return;
+                }
+
+                Console.WriteLine("Matches Found: " + matchedGuests.Count);
+
+                foreach (var guest in matchedGuests)
+                {
+                    Console.WriteLine("Guest ID: " + guest.GuestId);
+                    Console.WriteLine("Guest Name: " + guest.GuestName);
+                    Console.WriteLine("Room Number: " + guest.RoomNumber);
+                    Console.WriteLine("------------------");
+                }
             }
         }
 
