@@ -144,7 +144,9 @@ namespace Hotel_Management_System_part2
                     case 5:
                         ViewAllGuests(guests);
                         break;
-
+                    case 6:
+                        SearchAndFilterRooms(rooms);
+                        break;
                     case 0:
                         exitApp = true;
                         break;
@@ -313,6 +315,96 @@ namespace Hotel_Management_System_part2
                     Console.WriteLine("Total Nights: " + guest.TotalNights);
 
                     Console.WriteLine("------------------");
+                }
+            }
+            static void SearchAndFilterRooms(List<Room> rooms)
+            {
+                Console.WriteLine("1. Show All Available Rooms");
+                Console.WriteLine("2. Filter By Room Type");
+                Console.WriteLine("3. Filter By Max Price");
+                Console.WriteLine("4. Room Price Statistics");
+                Console.WriteLine("0. Back");
+
+                int choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+
+                        var availableRooms = rooms
+                            .Where(r => r.IsAvailable)
+                            .OrderBy(r => r.PricePerNight)
+                            .ToList();
+
+                        Console.WriteLine("Count: " + availableRooms.Count);
+
+                        foreach (var room in availableRooms)
+                        {
+                            Console.WriteLine($"{room.RoomNumber} - {room.RoomType} - {room.PricePerNight}");
+                        }
+
+                        break;
+
+                    case 2:
+
+                        Console.Write("Enter Room Type: ");
+                        string roomType = Console.ReadLine();
+
+                        var roomTypes = rooms
+                            .Where(r => r.RoomType.Equals(roomType, StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+                        Console.WriteLine("Count: " + roomTypes.Count);
+
+                        foreach (var room in roomTypes)
+                        {
+                            Console.WriteLine($"{room.RoomNumber} - {room.RoomType} - {room.PricePerNight}");
+                        }
+
+                        break;
+
+                    case 3:
+
+                        Console.Write("Enter Max Price: ");
+                        double maxPrice = Convert.ToDouble(Console.ReadLine());
+
+                        var filteredRooms = rooms
+                            .Where(r => r.IsAvailable && r.PricePerNight <= maxPrice)
+                            .OrderBy(r => r.PricePerNight)
+                            .ToList();
+
+                        Console.WriteLine("Count: " + filteredRooms.Count);
+
+                        foreach (var room in filteredRooms)
+                        {
+                            Console.WriteLine($"{room.RoomNumber} - {room.RoomType} - {room.PricePerNight}");
+                        }
+
+                        break;
+
+                    case 4:
+
+                        Console.WriteLine("Total Rooms: " + rooms.Count());
+                        Console.WriteLine("Available Rooms: " +
+                                          rooms.Count(r => r.IsAvailable));
+
+                        Console.WriteLine("Average Price: " +
+                                          rooms.Average(r => r.PricePerNight));
+
+                        Console.WriteLine("Minimum Price: " +
+                                          rooms.Min(r => r.PricePerNight));
+
+                        Console.WriteLine("Maximum Price: " +
+                                          rooms.Max(r => r.PricePerNight));
+
+                        break;
+
+                    case 0:
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid Choice");
+                        break;
                 }
             }
         }
