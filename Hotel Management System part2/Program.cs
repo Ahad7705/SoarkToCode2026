@@ -150,6 +150,9 @@ namespace Hotel_Management_System_part2
                     case 7:
                         GuestBookingStatistics(guests, rooms);
                         break;
+                    case 8:
+                        UpdateRoomPrice(rooms);
+                        break;
 
                     case 0:
                         exitApp = true;
@@ -460,6 +463,36 @@ namespace Hotel_Management_System_part2
                 {
                     Console.WriteLine(summary);
                 }
+            }
+            static void UpdateRoomPrice(List<Room> rooms)
+            {
+                Console.Write("Enter Room Number: ");
+                int roomNumber = Convert.ToInt32(Console.ReadLine());
+
+                Room room = rooms.FirstOrDefault(r => r.RoomNumber == roomNumber);
+
+                if (room == null)
+                {
+                    Console.WriteLine("Room not found.");
+                    return;
+                }
+
+                double oldPrice = room.PricePerNight;
+
+                Console.Write("Enter New Price: ");
+                double newPrice = Convert.ToDouble(Console.ReadLine());
+
+                if (newPrice <= 0)
+                {
+                    Console.WriteLine("Invalid Price.");
+                    return;
+                }
+
+                room.PricePerNight = newPrice;
+
+                Console.WriteLine("Room price updated successfully.");
+                Console.WriteLine("Old Price: " + oldPrice);
+                Console.WriteLine("New Price: " + room.PricePerNight);
             }
         }
 
