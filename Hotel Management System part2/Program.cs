@@ -156,6 +156,9 @@ namespace Hotel_Management_System_part2
                     case 9:
                         GuestLookupByName(guests);
                         break;
+                    case 10:
+                        RoomTypeBreakdownReport(rooms);
+                        break;
 
                     case 0:
                         exitApp = true;
@@ -523,6 +526,37 @@ namespace Hotel_Management_System_part2
                     Console.WriteLine("Room Number: " + guest.RoomNumber);
                     Console.WriteLine("------------------");
                 }
+            }
+            static void RoomTypeBreakdownReport(List<Room> rooms)
+            {
+                string[] roomTypes = { "Single", "Double", "Suite" };
+
+                foreach (string type in roomTypes)
+                {
+                    int count = rooms.Count(r => r.RoomType == type);
+
+                    Console.WriteLine("Room Type: " + type);
+                    Console.WriteLine("Count: " + count);
+
+                    if (count > 0)
+                    {
+                        double avgPrice =
+                            rooms.Where(r => r.RoomType == type)
+                                 .Average(r => r.PricePerNight);
+
+                        Console.WriteLine("Average Price: " +
+                                          avgPrice.ToString("F2"));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Average Price: N/A");
+                    }
+
+                    Console.WriteLine("-------------------");
+                }
+
+                Console.WriteLine("Overall Average Price: " +
+                    rooms.Average(r => r.PricePerNight).ToString("F2"));
             }
         }
 
