@@ -162,6 +162,10 @@ namespace Hotel_Management_System_part2
                     case 11:
                         CheckOutGuest(guests, rooms);
                         break;
+                    case 12:
+                        RemoveUnavailableRooms(rooms, guests);
+                        break;
+
 
                     case 0:
                         exitApp = true;
@@ -612,6 +616,51 @@ namespace Hotel_Management_System_part2
                     Console.WriteLine("Checkout completed successfully.");
                     Console.WriteLine("Total Guests: " + guests.Count);
                     Console.WriteLine("Total Rooms: " + rooms.Count);
+                }
+            }
+            static void RemoveUnavailableRooms(List<Room> rooms, List<Guest> guests)
+            {
+                var removableRooms = rooms
+                    .Where(r => !r.IsAvailable &&
+                           !guests.Any(g => g.RoomNumber == r.RoomNumber.ToString()))
+                    .OrderBy(r => r.RoomNumber)
+                    .ToList();
+
+                if (removableRooms.Count == 0)
+                {
+                    Console.WriteLine("All unavailable rooms are currently occupied. No rooms can be decommissioned.");
+                    return;
+                }
+
+                Console.WriteLine("Rooms That Can Be Removed:");
+
+                foreach (var room in removableRooms)
+                {
+                    Console.WriteLine($"{room.RoomNumber} - {room.RoomType} - {room.PricePerNight}");
+                }
+
+                Console.WriteLine("Count: " + removableRooms.Count);
+
+                Console.Write("Confirm Removal (Y/N): ");
+                string confirm = Console.ReadLine();
+
+                if (confirm.ToUpper() == "Y")
+                {
+                    rooms.RemoveAll(r =>
+                        !r.IsAvailable &&
+                        !guests.Any(g => g.RoomNumber == r.RoomNumber.ToString()));
+
+                    Console.WriteLine("Rooms Removed Successfully.");
+                    Console.WriteLine("Remaining Rooms: " + rooms.Count);
+
+                    var remainingRooms = rooms
+                        .Select(r => $"{r.RoomNumber} - {r.RoomType}")
+                        .ToList();
+
+                    foreach (var room in remainingRooms)
+                    {
+                        Console.WriteLine(room);
+                    }
                 }
             }
         }
