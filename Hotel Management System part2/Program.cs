@@ -1,4 +1,7 @@
-﻿namespace Hotel_Management_System_part2
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+namespace Hotel_Management_System_part2
 {
     public class Room
     {
@@ -34,6 +37,7 @@
             return pricePerNight * TotalNights;
         }
     }
+
 
     internal class Program
     {
@@ -122,6 +126,7 @@
                 switch (choice)
                 {
                     case 1:
+                        AddNewRoom(rooms);
                         break;
 
                     case 2:
@@ -140,6 +145,42 @@
                         exitApp = true;
                         break;
                 }
+            }
+            static void AddNewRoom(List<Room> rooms)
+            {
+                Console.Write("Enter Room Number: ");
+                int roomNumber = Convert.ToInt32(Console.ReadLine());
+
+                if (rooms.Any(r => r.RoomNumber == roomNumber))
+                {
+                    Console.WriteLine("Room number already exists.");
+                    return;
+                }
+
+                Console.Write("Enter Room Type: ");
+                string roomType = Console.ReadLine();
+
+                Console.Write("Enter Price Per Night: ");
+                double price = Convert.ToDouble(Console.ReadLine());
+
+                if (price <= 0)
+                {
+                    Console.WriteLine("Price must be greater than zero.");
+                    return;
+                }
+
+                Room room = new Room
+                {
+                    RoomNumber = roomNumber,
+                    RoomType = roomType,
+                    PricePerNight = price,
+                    IsAvailable = true
+                };
+
+                rooms.Add(room);
+
+                Console.WriteLine("Room added successfully.");
+                Console.WriteLine("Total Rooms: " + rooms.Count);
             }
         }
 
