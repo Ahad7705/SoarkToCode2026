@@ -130,6 +130,7 @@ namespace Hotel_Management_System_part2
                         break;
 
                     case 2:
+                        RegisterNewGuest(guests);
                         break;
 
                     case 3:
@@ -181,6 +182,40 @@ namespace Hotel_Management_System_part2
 
                 Console.WriteLine("Room added successfully.");
                 Console.WriteLine("Total Rooms: " + rooms.Count);
+            }
+            static void RegisterNewGuest(List<Guest> guests)
+            {
+                Console.Write("Enter Guest Name: ");
+                string guestName = Console.ReadLine();
+
+                Console.Write("Enter Check In Date: ");
+                string checkInDate = Console.ReadLine();
+
+                Console.Write("Enter Total Nights: ");
+                int totalNights = Convert.ToInt32(Console.ReadLine());
+
+                if (totalNights <= 0)
+                {
+                    Console.WriteLine("Total nights must be greater than zero.");
+                    return;
+                }
+
+                string guestId = "G" + (guests.Count + 1).ToString("000");
+
+                Guest guest = new Guest
+                {
+                    GuestId = guestId,
+                    GuestName = guestName,
+                    CheckInDate = checkInDate,
+                    TotalNights = totalNights,
+                    RoomNumber = "Not Assigned"
+                };
+
+                guests.Add(guest);
+
+                Console.WriteLine("Guest Registered Successfully");
+                Console.WriteLine("Guest ID: " + guest.GuestId);
+                Console.WriteLine("Guest Name: " + guest.GuestName);
             }
         }
 
