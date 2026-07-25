@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EFCoreProject.Models
+{
+    public class Dependent
+    {
+        public int DependentId { get; set; }
+
+        public string DependentName { get; set; }
+
+        public string DependentSex { get; set; }
+
+        public DateTime DependentBirthdate { get; set; }
+
+        public string Relationship { get; set; }
+    }
+}
