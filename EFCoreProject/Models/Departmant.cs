@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCoreProject.Models
 {
@@ -14,6 +11,18 @@ namespace EFCoreProject.Models
 
         public string DepartmentName { get; set; }
 
-        public int NumberOfEmployees { get; set; }
+
+        // worksfor
+
+        [InverseProperty("D")]
+        public List<Employee> Employees { get; set; }
+
+
+        // manage
+
+        [ForeignKey("Employee")]
+        public int EmployeeId { get; set; }
+
+        public Employee Employee { get; set; }
     }
 }
