@@ -11,6 +11,9 @@ namespace E_Commerce_Database.Models
         public int CategoryId { get; set; }
 
         public string CategoryName { get; set; }
+        // Category 1 : M Product
+
+        public List<Product> Products { get; set; }
 
     }
 }
