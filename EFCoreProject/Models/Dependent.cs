@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCoreProject.Models
 {
@@ -12,10 +8,9 @@ namespace EFCoreProject.Models
 
         public string DependentName { get; set; }
 
-        public string DependentSex { get; set; }
+        [ForeignKey("emp")]
+        public int EmployeeId { get; set; }
 
-        public DateTime DependentBirthdate { get; set; }
-
-        public string Relationship { get; set; }
+        public Employee emp { get; set; }
     }
 }
