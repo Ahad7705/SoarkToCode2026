@@ -17,7 +17,7 @@ namespace E_Commerce_Database.Models
 
         public string Password { get; set; }
 
-        
+        /
 
     }
 }
