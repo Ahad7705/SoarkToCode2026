@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Database.Models
 {
-    internal class Review
+    public class Review
     {
-        using System.ComponentModel.DataAnnotations.Schema;
-
-namespace ECommerceApp.Models
-    {
-        public class Review
-        {
+    
+       
             public int ReviewId { get; set; }
 
             public int Rating { get; set; }
@@ -30,5 +26,5 @@ namespace ECommerceApp.Models
             public Order Order { get; set; }
         }
     }
-}
-}
+
+
