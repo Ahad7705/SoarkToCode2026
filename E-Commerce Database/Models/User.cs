@@ -17,7 +17,9 @@ namespace E_Commerce_Database.Models
 
         public string Password { get; set; }
 
-        /
+        // User 1 : M Order
+
+        public List<Order> Orders { get; set; }
 
     }
 }
