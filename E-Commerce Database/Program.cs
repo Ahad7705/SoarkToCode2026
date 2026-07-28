@@ -11,8 +11,79 @@ namespace E_Commerce_Database
 
         static void Main(string[] args)
         {
+            bool exit = false;
 
-        }
+            while (!exit)
+            {
+                Console.WriteLine("===== E-Commerce Console App =====");
+                Console.WriteLine("1. Register User");
+                Console.WriteLine("2. Login");
+                Console.WriteLine("3. Add Category");
+                Console.WriteLine("4. Add Product");
+                Console.WriteLine("5. View Products");
+                Console.WriteLine("6. Place Order");
+                Console.WriteLine("7. View My Orders");
+                Console.WriteLine("8. View Order Details");
+                Console.WriteLine("9. Add Review");
+                Console.WriteLine("10. View Reviews");
+                Console.WriteLine("11. Logout");
+                Console.WriteLine("0. Exit");
+
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        RegisterUser();
+                        break;
+
+                    case 2:
+                        Login();
+                        break;
+
+                    case 3:
+                        AddCategory();
+                        break;
+
+                    case 4:
+                        AddProduct();
+                        break;
+
+                    case 5:
+                        ViewAllProducts();
+                        break;
+
+                    case 6:
+                        PlaceOrder();
+                        break;
+
+                    case 7:
+                        ViewMyOrders();
+                        break;
+
+                    case 8:
+                        ViewOrderDetails();
+                        break;
+
+                    case 9:
+                        AddReview();
+                        break;
+
+                    case 10:
+                        ViewReviewsForProduct();
+                        break;
+
+                    case 11:
+                        Logout();
+                        break;
+
+                    case 0:
+                        exit = true;
+                        break;
+                }
+            }
+
+            }
 
         // 1. Register New User
 
