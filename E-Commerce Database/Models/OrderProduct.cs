@@ -24,4 +24,3 @@ namespace E_Commerce_Database.Models
         public int Quantity { get; set; }
     }
 }
-}
